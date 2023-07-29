@@ -1,0 +1,9 @@
+
+.link-hover:hover{
+    background-color: rgba(236, 232, 232, 0.562);
+}
+
+.link-hover:hover small{
+    color: rgb(245, 113, 113);
+    font-weight: 500;
+}
