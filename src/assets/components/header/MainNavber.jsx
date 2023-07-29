@@ -21,7 +21,7 @@ const MainNavber = () => {
                             <a class="nav-link text-dark me-4 link-hover" href="#"><small>SHOP</small></a>
                             <a class="nav-link text-dark me-4 link-hover" href="#"><small>PROMOTION</small></a>
                             <a class="nav-link text-dark me-4 link-hover" href="#"><small>BLOG</small></a>
-                            <a class="nav-link text-dark me-4 link-hover" href='#'><small>CONTACT</small></a>
+                            <Link class="nav-link text-dark me-4 link-hover" to='/contact'><small>CONTACT</small></Link>
                         </div>
                     </div>
                     <div class="fw-bold d-flex order-2 ms-0 ms-md-5 ms-lg-5 ms-xl-5 dropdown">

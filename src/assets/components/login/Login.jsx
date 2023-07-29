@@ -16,7 +16,7 @@ const Login = () => {
 
                             <form style={{ width: "23rem" }}>
 
-                                <h4 class="fw-normal mb-3 pb-3" style={{ letterSpacing: "1px" }}>Log in</h4>
+                                <h5 class="fw-normal mb-3 pb-3" style={{ letterSpacing: "1px" }}>Log in</h5>
 
                                 <div class="form-outline mb-4">
                                     <input type="email" id="form2Example18" class="form-control form-control-lg" required/>

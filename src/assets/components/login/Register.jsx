@@ -14,7 +14,7 @@ const Register = () => {
 
                             <form style={{ width: "23rem" }}>
 
-                                <h4 class="fw-normal mb-3 pb-3" style={{ letterSpacing: "1px" }}>Register Now</h4>
+                                <h5 class="fw-normal mb-3 pb-3" style={{ letterSpacing: "1px" }}>Register Now</h5>
 
                                 <div class="form-outline mb-4">
                                     <input type="text" id='form2Example1' class="form-control form-control-lg" required />
