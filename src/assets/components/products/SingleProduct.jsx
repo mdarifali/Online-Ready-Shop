@@ -39,7 +39,7 @@ const SingleProduct = () => {
     return (
         <div className='container my-5'>
             <div className="row mb-5">
-                <div className="col-lg-6">
+                <div className="col-lg-6 p-5">
                     <img src={changeImage.img} alt="product" className='w-100' />
                     <div className='row mt-4'>
                         {
@@ -57,7 +57,7 @@ const SingleProduct = () => {
                         }
                     </div>
                 </div>
-                <div className="col-lg-6 mt-5 mt-lg-0 mt-md-0 px-2">
+                <div className="col-lg-6 mt-5 mt-lg-0 mt-md-0 p-5">
                     <div className='w-100'>
                         <h3>Pocket cotton sweatshirt</h3>
                         <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut...</p>

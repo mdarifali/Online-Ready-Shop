@@ -7,7 +7,7 @@ const MainNavber = () => {
     return (
         <div class="container-fluid p-0 sticky-top" >
             <nav class="navbar navbar-expand-lg bg-white py-3 shadow">
-                <div class="container">
+                <div class="container p-0">
                     <div className="fw-bold">
                         <Link class="navbar-brand" to="/">READY<span className='text-info'>SHOP</span></Link>
                     </div>
