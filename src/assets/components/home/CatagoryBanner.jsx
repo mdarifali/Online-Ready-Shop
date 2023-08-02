@@ -7,7 +7,7 @@ import banner3 from '../../images/banner_3.jpg';
 const CatagoryBanner = () => {
     return (
         <div className='container my-5'>
-            <div className="row g-4">
+            <div className="row">
                 <div className="col-md-4">
                     <div id='banner-1'>
                         <div>

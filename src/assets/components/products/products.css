@@ -10,3 +10,12 @@
     -moz-box-shadow: 10px 11px 25px -15px rgba(0,0,0,0.5);
     cursor: pointer;
 }
+
+
+/* @media screen and (max-width: 767px){
+    .single-img {
+        height: 30px;
+        margin: 0px;
+        padding: 0px;
+    }
+} */
