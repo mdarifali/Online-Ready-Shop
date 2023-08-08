@@ -20,7 +20,7 @@ const AllProducts = () => {
                         <p class="card-title">Branded Hoddy (coffee color)</p>
                         <span class="card-text text-danger fw-bolder">$500</span>
                     </div>
-                    <button class="btn btn-danger rounded-0">Add to Cart</button>
+                    <button class="btn btn-outline-danger rounded-0">Add to Cart</button>
                 </div>
             </div>
             <div className="col-md-4 col-lg-3 col-6">
@@ -30,7 +30,7 @@ const AllProducts = () => {
                         <p class="card-title">Branded Hoddy (coffee color)</p>
                         <span class="card-text text-danger fw-bolder">$500</span>
                     </div>
-                    <button class="btn btn-danger rounded-0">Add to Cart</button>
+                    <button class="btn btn-outline-danger rounded-0">Add to Cart</button>
                 </div>
             </div>
             <div className="col-md-4 col-lg-3 col-6">
@@ -40,7 +40,7 @@ const AllProducts = () => {
                         <p class="card-title">Branded Hoddy (coffee color)</p>
                         <span class="card-text text-danger fw-bolder">$500</span>
                     </div>
-                    <button class="btn btn-danger rounded-0">Add to Cart</button>
+                    <button class="btn btn-outline-danger rounded-0">Add to Cart</button>
                 </div>
             </div>
             <div className="col-md-4 col-lg-3 col-6">
@@ -50,7 +50,7 @@ const AllProducts = () => {
                         <p class="card-title">Branded Hoddy (coffee color)</p>
                         <span class="card-text text-danger fw-bolder">$500</span>
                     </div>
-                    <button class="btn btn-danger rounded-0">Add to Cart</button>
+                    <button class="btn btn-outline-danger rounded-0">Add to Cart</button>
                 </div>
             </div>
             <div className="col-md-4 col-lg-3 col-6">
@@ -60,7 +60,7 @@ const AllProducts = () => {
                         <p class="card-title">Branded Hoddy (coffee color)</p>
                         <span class="card-text text-danger fw-bolder">$500</span>
                     </div>
-                    <button class="btn btn-danger rounded-0">Add to Cart</button>
+                    <button class="btn btn-outline-danger rounded-0">Add to Cart</button>
                 </div>
             </div>
             <div className="col-md-4 col-lg-3 col-6">
@@ -70,7 +70,7 @@ const AllProducts = () => {
                         <p class="card-title">Branded Hoddy (coffee color)</p>
                         <span class="card-text text-danger fw-bolder">$500</span>
                     </div>
-                    <button class="btn btn-danger rounded-0">Add to Cart</button>
+                    <button class="btn btn-outline-danger rounded-0">Add to Cart</button>
                 </div>
             </div>
             <div className="col-md-4 col-lg-3 col-6">
@@ -80,7 +80,7 @@ const AllProducts = () => {
                         <p class="card-title">Branded Hoddy (coffee color)</p>
                         <span class="card-text text-danger fw-bolder">$500</span>
                     </div>
-                    <button class="btn btn-danger rounded-0">Add to Cart</button>
+                    <button class="btn btn-outline-danger rounded-0">Add to Cart</button>
                 </div>
             </div>
             <div className="col-md-4 col-lg-3 col-6">
@@ -90,7 +90,7 @@ const AllProducts = () => {
                         <p class="card-title">Branded Sunglash (Black color)</p>
                         <span class="card-text text-danger fw-bolder">$500</span>
                     </div>
-                    <button class="btn btn-danger rounded-0">Add to Cart</button>
+                    <button class="btn btn-outline-danger rounded-0">Add to Cart</button>
                 </div>
             </div>
         </div>

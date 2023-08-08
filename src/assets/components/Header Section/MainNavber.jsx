@@ -8,34 +8,32 @@ const MainNavber = () => {
         <div class="container-fluid p-0 sticky-top" >
             <nav class="navbar navbar-expand-lg bg-white py-3 shadow">
                 <div class="container p-0">
-                    <div className="fw-bold">
-                        <Link class="navbar-brand" to="/">READY<span className='text-info'>SHOP</span></Link>
-                    </div>
+                    <Link class="navbar-brand me-0 me-lg-3" to="/">READY<span className='text-info'>SHOP</span></Link>
                     <button class="navbar-toggler order-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-                        <div class="navbar-nav ms-auto fw-bold ps-2">
+                        <div class="navbar-nav ms-auto fw-bold">
                             <Link class="nav-link text-dark me-4 link-hover" to="/"><small>HOME</small></Link>
-                            <a class="nav-link text-dark me-4 link-hover" href="#"><small>SHOP</small></a>
+                            <Link class="nav-link text-dark me-4 link-hover" to="/shop"><small>SHOP</small></Link>
                             <a class="nav-link text-dark me-4 link-hover" href="#"><small>PROMOTION</small></a>
-                            <a class="nav-link text-dark me-4 link-hover" href="#"><small>BLOG</small></a>
+                            <Link class="nav-link text-dark me-4 link-hover" to="/blogs"><small>BLOG</small></Link>
                             <Link class="nav-link text-dark me-4 link-hover" to='/contact'><small>CONTACT</small></Link>
                         </div>
                     </div>
                     <div class="fw-bold d-flex order-2 ms-0 ms-md-5 ms-lg-5 ms-xl-5 dropdown">
-                        <a class="nav-link text-dark me-3 fs-5" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                        <a class="nav-link text-dark me-1 me-lg-3 fs-5" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
                             <BiSearchAlt /></a>
-                        <a class="nav-link text-dark me-3 fs-5" href="#" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"
+                        <a class="nav-link text-dark me-1 me-lg-3 fs-5" href="#" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"
                         ><BiUser /></a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><a class="dropdown-item" href="#">My Profile</a></li>
-                            <li><a class="dropdown-item" href="#">My Order</a></li>
+                            <li><Link class="dropdown-item" to="/profile">My Profile</Link></li>
+                            <li><Link class="dropdown-item" to="/order">My Order</Link></li>
                             <li><a class="dropdown-item" href="#">My Favorites</a></li>
                             <li><a class="dropdown-item active" href="#">Logout</a></li>
                         </ul>
-                        <button type="button" class="btn btn-light position-relative me-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <button type="button" class="btn btn-light position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             <BiCartAlt className='fs-5' />
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 2

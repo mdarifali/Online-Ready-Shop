@@ -12,7 +12,7 @@ import { BsTruck } from "react-icons/bs";
 import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai";
 import { TiStarFullOutline, TiStarHalfOutline, TiStarOutline } from "react-icons/ti";
 import { useState } from 'react';
-import Services from '../home/Services';
+import Services from '../Home Section/Services';
 
 
 const SingleProduct = () => {
@@ -39,25 +39,32 @@ const SingleProduct = () => {
     return (
         <div className='container my-5'>
             <div className="row mb-5">
-                <div className="col-lg-6 p-5">
-                    <img src={changeImage.img} alt="product" className='w-100' />
-                    <div className='row mt-4'>
-                        {
-                            images.map((image, index) => {
-                                return (
-                                    <div className='col-4' key={index}>
-                                        <img src={image.img} alt=""
-                                            onClick={() => setChangeImage(image)}
-                                            className='w-100'
-                                            style={{ cursor: 'pointer' }}
-                                        />
-                                    </div>
-                                )
-                            })
-                        }
+                <div className="col-lg-6">
+                    <div className='row'>
+                        <div className="col-lg-3 col-md-3 order-lg-1 order-md-1 order-2 mt-4 mt-lg-0">
+                            <div className='row flex-lg-column flex-md-column'>
+                                {
+                                    images.map((image, index) => {
+                                        return (
+                                            <div className='col mb-4' key={index}>
+                                                <img src={image.img} alt=""
+                                                    onClick={() => setChangeImage(image)}
+                                                    className='w-100'
+                                                    style={{ cursor: 'pointer' }}
+                                                />
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
+                        </div>
+                        <div className="col-lg-9 col-md-9 order-lg-2 order-md-2 order-1">
+                            <img src={changeImage.img} alt="product" className='w-100' />
+                        </div>
                     </div>
+
                 </div>
-                <div className="col-lg-6 mt-5 mt-lg-0 mt-md-0 p-5">
+                <div className="col-lg-6 mt-5 mt-lg-0 mt-md-0">
                     <div className='w-100'>
                         <h3>Pocket cotton sweatshirt</h3>
                         <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut...</p>
@@ -226,8 +233,8 @@ const SingleProduct = () => {
                             <div className="col-lg-6 col-md-6 mt-5 mt-lg-0 mt-md-0">
                                 <div>
                                     <p className='mb-4 fw-bold'>Add Review</p>
-                                    <input type="text" placeholder='Name*' required className='form-control mb-4'/>
-                                    <input type="text" placeholder='Email*' required className='form-control'/>
+                                    <input type="text" placeholder='Name*' required className='form-control mb-4' />
+                                    <input type="text" placeholder='Email*' required className='form-control' />
                                 </div>
                                 <div className='mt-5'>
                                     <p className='mb-4 fw-bold'>Your Rating:</p>

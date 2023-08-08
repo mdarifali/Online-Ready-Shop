@@ -1,8 +1,8 @@
 import React from 'react';
 import './home.css';
-import AllProducts from '../products/AllProducts';
-import Women from '../products/Women';
-import Men from '../products/Men';
+import AllProducts from '../Products Data Section/AllProducts';
+import Women from '../Products Data Section/Women';
+import Men from '../Products Data Section/Men';
 import './home.css';
 
 const NewArrivals = () => {

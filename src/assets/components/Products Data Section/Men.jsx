@@ -14,7 +14,7 @@ const Men = () => {
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
-                    <a href="#" class="btn btn-danger rounded-0">Add to Cart</a>
+                    <a href="#" class="btn btn-outline-danger rounded-0">Add to Cart</a>
                 </div>
             </div>
             <div className="col-md-4 col-lg-3 col-6">
@@ -24,7 +24,7 @@ const Men = () => {
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
-                    <a href="#" class="btn btn-danger rounded-0">Add to Cart</a>
+                    <a href="#" class="btn btn-outline-danger rounded-0">Add to Cart</a>
                 </div>
             </div>
             <div className="col-md-4 col-lg-3 col-6">
@@ -34,7 +34,7 @@ const Men = () => {
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
-                    <a href="#" class="btn btn-danger rounded-0">Add to Cart</a>
+                    <a href="#" class="btn btn-outline-danger rounded-0">Add to Cart</a>
                 </div>
             </div>
             <div className="col-md-4 col-lg-3 col-6">
@@ -44,7 +44,7 @@ const Men = () => {
                         <h5 class="card-title">Card title</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
-                    <a href="#" class="btn btn-danger rounded-0">Add to Cart</a>
+                    <a href="#" class="btn btn-outline-danger rounded-0">Add to Cart</a>
                 </div>
             </div>
         </div>

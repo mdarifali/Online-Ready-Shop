@@ -10,7 +10,7 @@ const Banner = () => {
                         <small>SPRING / SUMMER COLLECTION 2023</small>
                         <h1 className=' mt-4'>Get up-to <span className='text-danger fw-bold'>30%</span> Off</h1>
                         <h1>New Arrivals</h1>
-                        <button className='btn btn-outline-danger mt-2 rounded-0'>SHOP NOW</button>
+                        <button className='btn px-4 btn-danger mt-2 rounded-0'>SHOP NOW</button>
                     </div>
                 </div>
             </div>

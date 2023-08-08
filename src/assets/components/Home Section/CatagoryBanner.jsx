@@ -11,21 +11,21 @@ const CatagoryBanner = () => {
                 <div className="col-md-4">
                     <div id='banner-1'>
                         <div>
-                            <button class="btn btn-outline-light btn-lg rounded-0 px-4 fw-bold">Women's</button>
+                            <button class="btn btn-light btn-lg rounded-0 px-4 fw-bold">Women's</button>
                         </div>
                     </div>
                 </div>
                 <div className="col-md-4">
                     <div id='banner-2'>
                         <div>
-                            <button class="btn btn-outline-light btn-lg rounded-0 px-4 fw-bold">Accessories's</button>
+                            <button class="btn btn-light btn-lg rounded-0 px-4 fw-bold">Accessories's</button>
                         </div>
                     </div>
                 </div>
                 <div className="col-md-4">
                     <div id='banner-3'>
                         <div>
-                            <button class="btn btn-outline-light btn-lg rounded-0 px-4 fw-bold">Men's</button>
+                            <button class="btn btn-light btn-lg rounded-0 px-4 fw-bold">Men's</button>
                         </div>
                     </div>
                 </div>
