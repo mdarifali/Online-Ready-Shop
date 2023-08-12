@@ -4,8 +4,8 @@ import { FaMoneyBillAlt, FaUndoAlt, FaRegClock } from 'react-icons/fa'
 
 const Services = () => {
     return (
-        <div className='container py-5'>
-            <div className="row">
+        <div className='container'>
+            <div className="row p-5">
                 <div className="col-lg-3 border-2 border-light border-end mb-3 mb-lg-0" style={{backgroundColor: "#ecf0f1"}}>
                     <div className="row align-items-center py-4 py-lg-3">
                         <div className='col-2'>

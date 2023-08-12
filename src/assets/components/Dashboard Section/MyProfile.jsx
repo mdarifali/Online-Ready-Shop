@@ -7,15 +7,14 @@ const MyProfile = () => {
             <div className='text-center'>
                 <h1 className='mb-5 fw-bold d-inline-flex border-bottom border-info border-3'>Profile Details</h1>
             </div>
-            <hr />
             <div className="row gx-5 mt-5">
-                <div className="col-lg-6 col-md-6">
+                <div className="col-lg-6">
                     <div class="card rounded-0 p-5 border-0 bg-light">
                         <img src={profile} class="rounded-circle m-auto mt-4" alt="..." style={{ height: '100px', width: '100px' }} />
                         <h6 className='fw-bold text-center my-4'>Brandon William</h6>
                         <hr />
                         <div className="row mt-5">
-                            <div className="col-6">
+                            <div className="col">
                                 <div class="card-body text-muted">
                                     <p>Gender: </p>
                                     <p>Phone: </p>
@@ -23,7 +22,7 @@ const MyProfile = () => {
                                     <p>Date of Birth: </p>
                                 </div>
                             </div>
-                            <div className="col-6">
+                            <div className="col">
                                 <div className="card-body text-muted">
                                     <p>Male</p>
                                     <p>01700-000000</p>
@@ -34,7 +33,7 @@ const MyProfile = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-6 col-md-6">
+                <div className="col-lg-6">
                     <div class="card rounded-0 p-5 border-0 bg-light">
                         <form className='w-100'>
                             <div class="form-outline mb-4">

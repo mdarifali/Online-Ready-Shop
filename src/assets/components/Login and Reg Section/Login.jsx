@@ -16,31 +16,30 @@ const Login = () => {
 
                             <form style={{ width: "23rem" }}>
 
-                                <h5 class="fw-normal mb-3 pb-3" style={{ letterSpacing: "1px" }}>Log in</h5>
+                                <h3 class="fw-normal mb-3 pb-3" style={{ letterSpacing: "1px" }}>Log in</h3>
 
                                 <div class="form-outline mb-4">
-                                    <input type="email" id="form2Example18" class="form-control form-control-lg" required/>
-                                    <label class="form-label" for="form2Example18">Email address</label>
+                                    <input type="email" id="form2Example18" class="form-control form-control-lg" placeholder='Email' required />
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <input type="password" id="form2Example28" class="form-control form-control-lg" required/>
-                                    <label class="form-label" for="form2Example28">Password</label>
+                                    <input type="password" id="form2Example28" class="form-control form-control-lg" placeholder='Password' required />
                                 </div>
 
                                 <div class="pt-1 mb-4">
                                     <button class="btn btn-info btn-lg rounded-0 w-100" type="submit">Sing In</button>
                                 </div>
-                                <div class="mb-4 bg-white border p-2">
-                                    <span className='me-5'>Sing in by:</span>
-                                    <FcGoogle  className='fs-2 me-3'/>
-                                    <AiFillFacebook className='fs-2' style={{color: '#3b5998'}}/>
+                                <div class="mb-4 p-2 text-center">
+                                    <FcGoogle className='fs-2 me-3' />
+                                    <AiFillFacebook className='fs-2' style={{ color: '#3b5998' }} />
                                 </div>
+                                <div className='text-center'>
+                                    <p class="small mb-3 pb-lg-2"><Link class="text-muted" to="#">Forgot password?</Link></p>
+                                    <Link to="/register" class="nav-link">Don't have an account?
+                                        <span className='text-danger'>Register here</span>
+                                    </Link>
 
-                                <p class="small mb-3 pb-lg-2 text-center"><a class="text-muted" href="#!">Forgot password?</a></p>
-                                <span className='text-danger'>Don't have an account? <Link to="/register" class="link-info">Register here</Link>
-                                </span>
-                                
+                                </div>
                             </form>
                         </div>
 

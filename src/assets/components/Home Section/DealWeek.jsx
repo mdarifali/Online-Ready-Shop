@@ -1,5 +1,6 @@
 import React from 'react';
 import deal from '../../images/deal_ofthe_week.png';
+import Countdown from 'react-countdown';
 
 const DealWeek = () => {
     return (
@@ -16,6 +17,9 @@ const DealWeek = () => {
                                 <p class="card-text">This is a wider card with supporting text below as a 
                                     natural lead-in to additional content. This content is a little bit longer.</p>
                                 <button className='btn btn-dark btn-lg rounded-0'>Shop Now</button>
+                                <div className='mt-3'>
+                                <Countdown className='fs-4' date={Date.now() + 150000000}></Countdown>
+                                </div>
                             </div>
                         </div>
                     </div>

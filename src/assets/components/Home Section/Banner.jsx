@@ -1,5 +1,6 @@
 import React from 'react';
 import './home.css';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -7,10 +8,10 @@ const Banner = () => {
             <div className='container'>
                 <div className='row pt-5'>
                     <div className="col mt-5 text-uppercase">
-                        <small>SPRING / SUMMER COLLECTION 2023</small>
+                        <p className='text-light'>SPRING / SUMMER COLLECTION 2023</p>
                         <h1 className=' mt-4'>Get up-to <span className='text-danger fw-bold'>30%</span> Off</h1>
                         <h1>New Arrivals</h1>
-                        <button className='btn px-4 btn-danger mt-2 rounded-0'>SHOP NOW</button>
+                        <Link className='btn px-4 btn-danger mt-2 rounded-0' to='/shop'>SHOP NOW</Link>
                     </div>
                 </div>
             </div>

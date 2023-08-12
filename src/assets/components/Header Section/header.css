@@ -1,9 +1,11 @@
-
+.link-hover{
+    transition: .50s ease;
+}
 .link-hover:hover{
-    background-color: rgba(236, 232, 232, 0.562);
+    background-color: rgb(73, 73, 73);
 }
 
 .link-hover:hover small{
-    color: rgb(245, 113, 113);
+    color: rgb(0, 204, 255);
     font-weight: 500;
 }

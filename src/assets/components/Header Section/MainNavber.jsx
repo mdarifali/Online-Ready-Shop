@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './header.css';
 import { BiSearchAlt, BiUser, BiCartAlt } from "react-icons/bi";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { Link } from 'react-router-dom';
+import cartimg1 from '../../images/product_1.png';
 
 const MainNavber = () => {
+
+    const [count, setCount] = useState(1);
+
+    const increment = () => {
+        setCount(parseInt(count) + 1);
+    }
+
+    const deincrement = () => {
+        setCount(parseInt(count) - 1);
+    }
+
     return (
         <div class="container-fluid p-0 sticky-top" >
             <nav class="navbar navbar-expand-lg bg-white py-3 shadow">
-                <div class="container p-0">
+                <div class="container">
                     <Link class="navbar-brand me-0 me-lg-3" to="/">READY<span className='text-info'>SHOP</span></Link>
                     <button class="navbar-toggler order-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -31,7 +44,7 @@ const MainNavber = () => {
                             <li><Link class="dropdown-item" to="/profile">My Profile</Link></li>
                             <li><Link class="dropdown-item" to="/order">My Order</Link></li>
                             <li><a class="dropdown-item" href="#">My Favorites</a></li>
-                            <li><a class="dropdown-item active" href="#">Logout</a></li>
+                            <li><Link class="dropdown-item active" to="/login">Login</Link></li>
                         </ul>
                         <button type="button" class="btn btn-light position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             <BiCartAlt className='fs-5' />
@@ -49,8 +62,8 @@ const MainNavber = () => {
                 </div>
                 <div class="offcanvas-body">
                     <div className='d-flex justify-content-center align-items-center'>
-                        <input type="search" className='form-control w-25 me-1' placeholder='search  items' name="search"/>
-                        <div><BiSearchAlt className='fs-1'/></div>
+                        <input type="search" className='form-control w-25 me-1' placeholder='search  items' name="search" />
+                        <div><BiSearchAlt className='fs-1' /></div>
                     </div>
                 </div>
             </div>
@@ -60,7 +73,29 @@ const MainNavber = () => {
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    No items added
+                    <div className="row align-items-center text-center">
+                        <div className="col">
+                            <img src={cartimg1} calt="" style={{height: '100px'}}/>
+                        </div>
+                        <div className="col">
+                            <small>Branded Hoddy (coffee color) </small>
+                            <div className='d-flex flex-row align-items-center mt-2'>
+                                <span onClick={increment} >
+                                    <AiOutlinePlus className='fs-4' />
+                                </span>
+                                <input type="text" value={count} className='form-control text-info fw-bold text-center mx-1 rounded-pill' style={{ width: '50px' }} />
+                                <span onClick={deincrement} >
+                                    <AiOutlineMinus className='fs-4' />
+                                </span>
+                            </div>
+                        </div>
+                        <div className="col">
+                            <div className='float-end'>
+                                <button type="button" class="btn-close" aria-label="Close"></button>
+                                <h5 className='text-danger fw-bolder mt-5'>$500</h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

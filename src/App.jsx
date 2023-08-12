@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <TopNavber />
+      {/* <TopNavber /> */}
       <MainNavber />
       <Routes>
         <Route path="/" element={<Home />} />

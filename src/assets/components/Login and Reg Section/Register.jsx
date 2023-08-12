@@ -22,29 +22,32 @@ const Register = () => {
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <input type="email" id="form2Example18" class="form-control form-control-lg" required/>
+                                    <input type="email" id="form2Example18" class="form-control form-control-lg" required />
                                     <label class="form-label" for="form2Example18">Email address</label>
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <input type="password" id="form2Example28" class="form-control form-control-lg" required/>
+                                    <input type="password" id="form2Example28" class="form-control form-control-lg" required />
                                     <label class="form-label" for="form2Example28">Password</label>
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <input type="password" id="form2Example28" class="form-control form-control-lg" required/>
+                                    <input type="password" id="form2Example28" class="form-control form-control-lg" required />
                                     <label class="form-label" for="form2Example28">Confirm Password</label>
                                 </div>
 
                                 <div class="pt-1 mb-4">
                                     <button class="btn btn-info btn-lg rounded-0 w-100" type="submit">Sing Up</button>
                                 </div>
-                                <div class="mb-4 bg-white border p-2">
-                                    <span className='me-5'>Sing up by:</span>
-                                    <FcGoogle  className='fs-2 me-3'/>
-                                    <AiFillFacebook className='fs-2' style={{color: '#3b5998'}}/>
+                                <div class="mb-4 text-center p-2">
+                                    <FcGoogle className='fs-2 me-3' />
+                                    <AiFillFacebook className='fs-2' style={{ color: '#3b5998' }} />
                                 </div>
-                                <span className='text-danger'>Do you have an account? <Link to="/login" class="link-info">Login here</Link></span>
+                                <div className='text-center'>
+                                    <Link className='nav-link' to="/login" >Do you have an account?
+                                        <span className='text-danger'>Login here</span>
+                                    </Link>
+                                </div>
                             </form>
                         </div>
 
