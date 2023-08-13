@@ -18,8 +18,8 @@ const MainNavber = () => {
     }
 
     return (
-        <div class="container-fluid p-0 sticky-top" >
-            <nav class="navbar navbar-expand-lg bg-white py-3 shadow">
+        <div class="sticky-top" >
+            <nav class="navbar navbar-expand-lg bg-white shadow">
                 <div class="container">
                     <Link class="navbar-brand me-0 me-lg-3" to="/">READY<span className='text-info'>SHOP</span></Link>
                     <button class="navbar-toggler order-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,26 +27,26 @@ const MainNavber = () => {
                     </button>
 
                     <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
-                        <div class="navbar-nav ms-auto fw-bold">
+                        <div class="navbar-nav m-auto fw-bold">
                             <Link class="nav-link text-dark me-4 link-hover" to="/"><small>HOME</small></Link>
                             <Link class="nav-link text-dark me-4 link-hover" to="/shop"><small>SHOP</small></Link>
-                            <a class="nav-link text-dark me-4 link-hover" href="#"><small>PROMOTION</small></a>
+                            <Link class="nav-link text-dark me-4 link-hover" to="#"><small>PROMOTION</small></Link>
                             <Link class="nav-link text-dark me-4 link-hover" to="/blogs"><small>BLOG</small></Link>
                             <Link class="nav-link text-dark me-4 link-hover" to='/contact'><small>CONTACT</small></Link>
                         </div>
                     </div>
-                    <div class="fw-bold d-flex order-2 ms-0 ms-md-5 ms-lg-5 ms-xl-5 dropdown">
-                        <a class="nav-link text-dark me-1 me-lg-3 fs-5" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                    <div class="d-flex order-2 dropdown align-items-center">
+                        <a class="nav-link text-dark me-3 me-lg-5 me-md-5 fs-5" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
                             <BiSearchAlt /></a>
-                        <a class="nav-link text-dark me-1 me-lg-3 fs-5" href="#" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"
+                        <a class="nav-link text-dark me-2 me-lg-5 me-md-5 fs-5" href="#" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"
                         ><BiUser /></a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <li><Link class="dropdown-item" to="/profile">My Profile</Link></li>
                             <li><Link class="dropdown-item" to="/order">My Order</Link></li>
-                            <li><a class="dropdown-item" href="#">My Favorites</a></li>
+                            <li><Link class="dropdown-item" to="#">My Favorites</Link></li>
                             <li><Link class="dropdown-item active" to="/login">Login</Link></li>
                         </ul>
-                        <button type="button" class="btn btn-light position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <button type="button" class="btn btn-light position-relative rounded-pill" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             <BiCartAlt className='fs-5' />
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 2
@@ -83,7 +83,7 @@ const MainNavber = () => {
                                 <span onClick={increment} >
                                     <AiOutlinePlus className='fs-4' />
                                 </span>
-                                <input type="text" value={count} className='form-control text-info fw-bold text-center mx-1 rounded-pill' style={{ width: '50px' }} />
+                                <input type="text" value={count} className='form-control text-info f text-center mx-1 rounded-pill' style={{ width: '50px' }} />
                                 <span onClick={deincrement} >
                                     <AiOutlineMinus className='fs-4' />
                                 </span>

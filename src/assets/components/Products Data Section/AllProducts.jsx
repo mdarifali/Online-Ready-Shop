@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 const AllProducts = () => {
     return (
         <div className='row g-5 text-center'>
-            <div className="col-md-4 col-lg-3 col-6">
+            <div className="col-md-4 col-lg-3 col-12">
                 <div class="card border-0 card-body-hover">
                     <Link to='/single-poduct' class="nav-link">
                         <img src={product1} class="card-img-top" alt="..." />
@@ -23,7 +23,7 @@ const AllProducts = () => {
                     <button class="btn btn-outline-danger rounded-0">Add to Cart</button>
                 </div>
             </div>
-            <div className="col-md-4 col-lg-3 col-6">
+            <div className="col-md-4 col-lg-3 col-12">
                 <div class="card border-0 card-body-hover">
                     <img src={product2} class="card-img-top" alt="..." />
                     <div class="card-body">
@@ -33,7 +33,7 @@ const AllProducts = () => {
                     <button class="btn btn-outline-danger rounded-0">Add to Cart</button>
                 </div>
             </div>
-            <div className="col-md-4 col-lg-3 col-6">
+            <div className="col-md-4 col-lg-3 col-12">
                 <div class="card border-0 card-body-hover">
                     <img src={product3} class="card-img-top" alt="..." />
                     <div class="card-body">
@@ -43,7 +43,7 @@ const AllProducts = () => {
                     <button class="btn btn-outline-danger rounded-0">Add to Cart</button>
                 </div>
             </div>
-            <div className="col-md-4 col-lg-3 col-6">
+            <div className="col-md-4 col-lg-3 col-12">
                 <div class="card border-0 card-body-hover">
                     <img src={product4} class="card-img-top" alt="..." />
                     <div class="card-body">
@@ -53,7 +53,7 @@ const AllProducts = () => {
                     <button class="btn btn-outline-danger rounded-0">Add to Cart</button>
                 </div>
             </div>
-            <div className="col-md-4 col-lg-3 col-6">
+            <div className="col-md-4 col-lg-3 col-12">
                 <div class="card border-0 card-body-hover">
                     <img src={product5} class="card-img-top" alt="..." />
                     <div class="card-body">
@@ -63,7 +63,7 @@ const AllProducts = () => {
                     <button class="btn btn-outline-danger rounded-0">Add to Cart</button>
                 </div>
             </div>
-            <div className="col-md-4 col-lg-3 col-6">
+            <div className="col-md-4 col-lg-3 col-12">
                 <div class="card border-0 card-body-hover">
                     <img src={product3} class="card-img-top" alt="..." />
                     <div class="card-body">
@@ -73,7 +73,7 @@ const AllProducts = () => {
                     <button class="btn btn-outline-danger rounded-0">Add to Cart</button>
                 </div>
             </div>
-            <div className="col-md-4 col-lg-3 col-6">
+            <div className="col-md-4 col-lg-3 col-12">
                 <div class="card border-0 card-body-hover">
                     <img src={product1} class="card-img-top" alt="..." />
                     <div class="card-body">
@@ -83,7 +83,7 @@ const AllProducts = () => {
                     <button class="btn btn-outline-danger rounded-0">Add to Cart</button>
                 </div>
             </div>
-            <div className="col-md-4 col-lg-3 col-6">
+            <div className="col-md-4 col-lg-3 col-12">
                 <div class="card border-0 card-body-hover">
                     <img src={product6} class="card-img-top" alt="..." />
                     <div class="card-body">

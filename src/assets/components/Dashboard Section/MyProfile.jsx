@@ -5,7 +5,7 @@ const MyProfile = () => {
     return (
         <div className='container my-5'>
             <div className='text-center'>
-                <h1 className='mb-5 fw-bold d-inline-flex border-bottom border-info border-3'>Profile Details</h1>
+                <h1 className='mb-5 d-inline-flex border-bottom border-info border-3'>Profile Details</h1>
             </div>
             <div className="row gx-5 mt-5">
                 <div className="col-lg-6">
