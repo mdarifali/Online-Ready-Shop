@@ -20,7 +20,7 @@ const MainNavber = () => {
     return (
         <div class="sticky-top" >
             <nav class="navbar navbar-expand-lg bg-white shadow">
-                <div class="container">
+                <div class="container py-1">
                     <Link class="navbar-brand me-0 me-lg-3" to="/">READY<span className='text-info'>SHOP</span></Link>
                     <button class="navbar-toggler order-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>

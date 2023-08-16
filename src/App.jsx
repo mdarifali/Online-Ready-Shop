@@ -11,6 +11,7 @@ import Shop from "./assets/components/Shop Section/Shop";
 import AllBlogs from "./assets/components/Blogs Section/AllBlogs";
 import MyProfile from "./assets/components/Dashboard Section/MyProfile";
 import MyOrder from "./assets/components/Dashboard Section/MyOrder";
+import NewsLetter from "./assets/components/Home Section/NewsLetter";
 
 
 
@@ -33,6 +34,7 @@ function App() {
         <Route path="/profile" element={<MyProfile />} />
         <Route path="/order" element={<MyOrder />} />
       </Routes>
+      <NewsLetter />
       <Footer />
     </>
   )

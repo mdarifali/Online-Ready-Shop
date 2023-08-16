@@ -6,6 +6,7 @@ import DealWeek from './DealWeek';
 import BestSellers from './BestSellers';
 import Services from './Services';
 import Blogs from './Blogs';
+import Faq from './Faq';
 
 
 const Home = () => {
@@ -17,7 +18,8 @@ const Home = () => {
             <DealWeek />
             <BestSellers />
             <Services />
-            <Blogs />
+            {/* <Blogs /> */}
+            <Faq />
         </div>
     );
 };

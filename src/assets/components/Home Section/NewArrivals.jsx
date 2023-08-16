@@ -7,7 +7,7 @@ import './home.css';
 
 const NewArrivals = () => {
     return (
-        <div className='container pb-5'>
+        <div className='container my-5'>
             <div className="row">
                 <h1 className='text-center'>New Arrivals</h1>
                 <div className='col mt-5 text-lg-center text-md-center'>

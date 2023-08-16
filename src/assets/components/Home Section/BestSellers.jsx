@@ -13,7 +13,6 @@ const BestSellers = () => {
         <Carousel
           className='py-5'
           plugins={[
-            'arrows',
 
             'infinite',
 
