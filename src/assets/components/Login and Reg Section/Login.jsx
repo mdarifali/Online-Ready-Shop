@@ -1,12 +1,38 @@
 import React from 'react';
 import login from '../../images/login.jpg';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AiFillFacebook } from 'react-icons/ai';
 import { FcGoogle } from 'react-icons/fc';
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import auth from '../../../firebaseConfig';
+import { useState } from 'react';
 
 
 
 const Login = () => {
+
+    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    // const [email, setEmail] = useState([])
+    // const [password, setPassword] = useState([])
+
+    if (error) {
+        return (
+            <div>
+                <p>Error: {error.message}</p>
+            </div>
+        );
+    }
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+    if (user) {
+        return (
+            <div>
+                <p>Signed In User: {user.email}</p>
+            </div>
+        );
+    }
+
     return (
         <div class="vh-100">
             <div class="container my-5">
@@ -19,18 +45,23 @@ const Login = () => {
                                 <h3 class="fw-normal mb-3 pb-3" style={{ letterSpacing: "1px" }}>Log in</h3>
 
                                 <div class="form-outline mb-4">
-                                    <input type="email" id="form2Example18" class="form-control form-control-lg" placeholder='Email' required />
+                                    <input type="email" id="form2Example18" class="form-control form-control-lg" placeholder='Email' required
+                                    />
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <input type="password" id="form2Example28" class="form-control form-control-lg" placeholder='Password' required />
+                                    <input type="password" id="form2Example28" class="form-control form-control-lg" placeholder='Password' required
+
+                                    />
                                 </div>
 
                                 <div class="pt-1 mb-4">
                                     <button class="btn btn-info btn-lg rounded-0 w-100" type="submit">Sing In</button>
                                 </div>
                                 <div class="mb-4 p-2 text-center">
-                                    <FcGoogle className='fs-2 me-3' />
+                                    <button onClick={() => signInWithGoogle()} className='btn'>
+                                        <FcGoogle className='fs-2 me-3' />
+                                    </button>
                                     <AiFillFacebook className='fs-2' style={{ color: '#3b5998' }} />
                                 </div>
                                 <div className='text-center'>

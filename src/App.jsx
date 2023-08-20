@@ -14,8 +14,6 @@ import MyOrder from "./assets/components/Dashboard Section/MyOrder";
 import NewsLetter from "./assets/components/Home Section/NewsLetter";
 
 
-
-
 function App() {
 
 
