@@ -1,7 +1,14 @@
 import React from 'react';
 import profile from '../../images/Review-1.jpg';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import app from '../../firebase/firebaseConfig';
+import { getAuth } from 'firebase/auth';
 
 const MyProfile = () => {
+
+    const auth = getAuth(app);
+    const [user] = useAuthState(auth);
+
     return (
         <div className='container my-5'>
             <div className='text-center'>
@@ -10,8 +17,8 @@ const MyProfile = () => {
             <div className="row gx-5 bg-light">
                 <div className="col-lg-6">
                     <div class="p-5 text-center">
-                        <img src={profile} class="rounded-circle mt-4" alt="..." style={{ height: '80px', width: '80px' }} />
-                        <h6 className='fw-bold my-4'>Brandon William</h6>
+                        <img src={user ? user.photoURL : profile} class="rounded-circle mt-4" alt="..." style={{ height: '80px', width: '80px' }} />
+                        <h6 className='fw-bold my-4'>{user ? user.displayName : 'User Name Not Found'}</h6>
                         <div className="row mt-5 border p-2">
                             <div className="col text-start border-end">
                                 <div class="card-body text-muted">
@@ -24,8 +31,8 @@ const MyProfile = () => {
                             <div className="col text-end">
                                 <div className="card-body text-muted">
                                     <p>Male</p>
-                                    <p>01700-000000</p>
-                                    <p>user@gmail.com</p>
+                                    <p>{user ? user.phoneNumber : "User Phone Not Found"}</p>
+                                    <p>{user ? user.email : 'User Email Not Found'}</p>
                                     <p>01/01/0000</p>
                                 </div>
                             </div>

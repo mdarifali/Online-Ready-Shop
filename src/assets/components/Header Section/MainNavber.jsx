@@ -1,20 +1,38 @@
 import React, { useState } from 'react';
+import Swal from 'sweetalert2'
 import './header.css';
 import { BiSearchAlt, BiUser, BiCartAlt } from "react-icons/bi";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import cartimg1 from '../../images/product_1.png';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { getAuth, signOut } from 'firebase/auth';
+import app from '../../firebase/firebaseConfig';
+import { useDispatch, useSelector } from 'react-redux';
+import { increment, decrement } from '../../redux/features/counter/counterSlice';
 
 const MainNavber = () => {
 
-    const [count, setCount] = useState(1);
+    const count = useSelector((state) => state.counter.count)
+    const dispatch = useDispatch()
 
-    const increment = () => {
-        setCount(parseInt(count) + 1);
-    }
+    const auth = getAuth(app)
+    const [user] = useAuthState(auth)
+    const navigate = useNavigate()
 
-    const deincrement = () => {
-        setCount(parseInt(count) - 1);
+    const handleLogout = () => {
+        signOut(auth)
+            .then(result => {
+                Swal.fire(
+                    'User',
+                    'Logout Successful',
+                    'success'
+                )
+                navigate('/login')
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
     }
 
     return (
@@ -44,7 +62,14 @@ const MainNavber = () => {
                             <li><Link class="dropdown-item" to="/profile">My Profile</Link></li>
                             <li><Link class="dropdown-item" to="/order">My Order</Link></li>
                             <li><Link class="dropdown-item" to="#">My Favorites</Link></li>
-                            <li><Link class="dropdown-item active" to="/login">Login</Link></li>
+
+                            {user ?
+                                <li><button onClick={handleLogout} class="dropdown-item active btn">Logout</button></li>
+                                :
+                                <li><Link class="dropdown-item active" to="/login">Login</Link></li>
+
+                            }
+
                         </ul>
                         <button type="button" class="btn btn-light position-relative rounded-pill" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             <BiCartAlt className='fs-5' />
@@ -75,16 +100,16 @@ const MainNavber = () => {
                 <div class="offcanvas-body">
                     <div className="row align-items-center text-center">
                         <div className="col">
-                            <img src={cartimg1} calt="" style={{height: '100px'}}/>
+                            <img src={cartimg1} calt="" style={{ height: '100px' }} />
                         </div>
                         <div className="col">
                             <small>Branded Hoddy (coffee color) </small>
                             <div className='d-flex flex-row align-items-center mt-2'>
-                                <span onClick={increment} >
+                                <span onClick={() => dispatch (increment())} >
                                     <AiOutlinePlus className='fs-4' />
                                 </span>
                                 <input type="text" value={count} className='form-control text-info f text-center mx-1 rounded-pill' style={{ width: '50px' }} />
-                                <span onClick={deincrement} >
+                                <span onClick={() => dispatch (decrement())} >
                                     <AiOutlineMinus className='fs-4' />
                                 </span>
                             </div>

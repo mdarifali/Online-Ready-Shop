@@ -12,6 +12,8 @@ import AllBlogs from "./assets/components/Blogs Section/AllBlogs";
 import MyProfile from "./assets/components/Dashboard Section/MyProfile";
 import MyOrder from "./assets/components/Dashboard Section/MyOrder";
 import NewsLetter from "./assets/components/Home Section/NewsLetter";
+import RequireAuth from "./assets/RequireAuth/RequireAuth";
+import Loading from "./assets/components/Loading Spinner/Loading";
 
 
 function App() {
@@ -26,11 +28,16 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/single-poduct" element={<SingleProduct />} />
+        <Route path='/single-poduct' element={
+          <RequireAuth>
+            <SingleProduct />
+          </RequireAuth> 
+        } />
         <Route path="/shop" element={<Shop />} />
         <Route path="/blogs" element={<AllBlogs />} />
         <Route path="/profile" element={<MyProfile />} />
         <Route path="/order" element={<MyOrder />} />
+        <Route path="/loading" element={<Loading />} />
       </Routes>
       <NewsLetter />
       <Footer />
