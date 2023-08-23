@@ -2,8 +2,8 @@ import React from 'react';
 
 const NewsLetter = () => {
     return (
-        <div className='container-fluid mt-0 mt-lg-5 ' style={{ backgroundColor: '#ecf0f1' }}>
-            <div className="container py-4">
+        <div className='container-fluid mt-5' style={{ backgroundColor: '#ecf0f1' }}>
+            <div className="container py-4 mt-5">
                 <div className='row align-items-center'>
                     <div className="col-lg-6 mb-lg-0 mb-4">
                         <h2>Newsletter</h2>

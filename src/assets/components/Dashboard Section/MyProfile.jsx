@@ -10,12 +10,12 @@ const MyProfile = () => {
     const [user] = useAuthState(auth);
 
     return (
-        <div className='container my-5'>
+        <div className='container-fluid my-5'>
             <div className='text-center'>
                 <h1 className='mb-5 d-inline-flex border-bottom border-info border-3'>Profile Details</h1>
             </div>
-            <div className="row gx-5 bg-light">
-                <div className="col-lg-6">
+            <div className="row bg-light">
+                <div className="col-12">
                     <div class="p-5 text-center">
                         <img src={user ? user.photoURL : profile} class="rounded-circle mt-4" alt="..." style={{ height: '80px', width: '80px' }} />
                         <h6 className='fw-bold my-4'>{user ? user.displayName : 'User Name Not Found'}</h6>
@@ -39,7 +39,7 @@ const MyProfile = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-6">
+                <div className="col-12">
                     <div class="p-5">
                         <h5 className='text-center mb-3'>Edit Your Profile</h5>
                         <form className='w-100'>

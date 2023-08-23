@@ -7,7 +7,7 @@ const Shop = () => {
     return (
         <div className='container my-5'>
             <div className="row gx-5">
-                <div className="col-3 col-lg-2 col-md-2">
+                <div className="col col-lg-2 col-md-2 order-lg-1 order-md-1 order-2">
                     <p className='fw-bold'>Product Category</p>
                     <ul className='nav flex-column my-4'>
                         <li className='nav-item'>
@@ -82,24 +82,7 @@ const Shop = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-9 col-lg-10 col-md-10">
-                    <div className='row mb-5'>
-                        <div className="col-3">
-                            <select class="form-select">
-                                <option selected>Default Sorting</option>
-                                <option value="1">Price</option>
-                                <option value="2">Product Name</option>
-                            </select>
-                        </div>
-                        <div className="col-3">
-                            <select class="form-select">
-                                <option selected>2</option>
-                                <option value="4">4</option>
-                                <option value="6">6</option>
-                                <option value="8">8</option>
-                            </select>
-                        </div>
-                    </div>
+                <div className="col col-lg-10 col-md-10 order-lg-2 order-md-2 order-1">
                     <AllProducts />
                     <div className='my-5 float-end'>
                         <ul class="pagination text-dark">
@@ -111,8 +94,8 @@ const Shop = () => {
                         </ul>
                     </div>
                 </div>
-                <Services />
             </div>
+                <Services />
         </div>
     );
 };

@@ -8,21 +8,21 @@ const CatagoryBanner = () => {
     return (
         <div className='container my-5'>
             <div className="row">
-                <div className="col-md-4">
+                <div className="col-md-4 mb-4 mb-lg-0">
                     <div id='banner-1'>
                         <div>
                             <button class="btn btn-light btn-lg rounded-0 px-4 fw-bold">Women's</button>
                         </div>
                     </div>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 mb-4 mb-lg-0">
                     <div id='banner-2'>
                         <div>
                             <button class="btn btn-light btn-lg rounded-0 px-4 fw-bold">Accessories's</button>
                         </div>
                     </div>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-4 mb-5 mb-lg-0">
                     <div id='banner-3'>
                         <div>
                             <button class="btn btn-light btn-lg rounded-0 px-4 fw-bold">Men's</button>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const MyOrder = () => {
     return (
-        <div className='container my-5'>
+        <div className='container-fluid my-5'>
             <div className='text-center'>
                 <h1 className='mb-5 d-inline-flex border-bottom border-info border-3'>My Orders</h1>
             </div>

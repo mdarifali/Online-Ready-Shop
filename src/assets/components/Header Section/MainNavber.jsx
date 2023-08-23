@@ -36,10 +36,10 @@ const MainNavber = () => {
     }
 
     return (
-        <div class="sticky-top" >
+        <div className='sticky-top'>
             <nav class="navbar navbar-expand-lg bg-white shadow">
-                <div class="container py-1">
-                    <Link class="navbar-brand me-0 me-lg-3" to="/">READY<span className='text-info'>SHOP</span></Link>
+                <div class="container-fluid">
+                    <Link class="nav-link" to="/">READY<span className='text-info'>SHOP</span></Link>
                     <button class="navbar-toggler order-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -48,30 +48,28 @@ const MainNavber = () => {
                         <div class="navbar-nav m-auto fw-bold">
                             <Link class="nav-link text-dark me-4 link-hover" to="/"><small>HOME</small></Link>
                             <Link class="nav-link text-dark me-4 link-hover" to="/shop"><small>SHOP</small></Link>
-                            <Link class="nav-link text-dark me-4 link-hover" to="#"><small>PROMOTION</small></Link>
+                            <Link class="nav-link text-dark me-4 link-hover" to="#"><small>Dashboard</small></Link>
                             <Link class="nav-link text-dark me-4 link-hover" to="/blogs"><small>BLOG</small></Link>
                             <Link class="nav-link text-dark me-4 link-hover" to='/contact'><small>CONTACT</small></Link>
                         </div>
                     </div>
                     <div class="d-flex order-2 dropdown align-items-center">
-                        <a class="nav-link text-dark me-3 me-lg-5 me-md-5 fs-5" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-                            <BiSearchAlt /></a>
-                        <a class="nav-link text-dark me-2 me-lg-5 me-md-5 fs-5" href="#" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"
-                        ><BiUser /></a>
+                        <a class="nav-link text-dark" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                            <BiSearchAlt className='fs-5 me-2 me-lg-5 me-md-5 me-xl-5'/>
+                        </a>
+                        <a class="nav-link text-dark" href="#" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"
+                        ><BiUser className='fs-5 me-2 me-lg-5 me-md-5 me-xl-5'/></a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <li><Link class="dropdown-item" to="/profile">My Profile</Link></li>
-                            <li><Link class="dropdown-item" to="/order">My Order</Link></li>
-                            <li><Link class="dropdown-item" to="#">My Favorites</Link></li>
-
+                            <li><Link class="dropdown-item" to="/dashboard">My Dashboard</Link></li>
                             {user ?
+
                                 <li><button onClick={handleLogout} class="dropdown-item active btn">Logout</button></li>
                                 :
                                 <li><Link class="dropdown-item active" to="/login">Login</Link></li>
-
                             }
 
                         </ul>
-                        <button type="button" class="btn btn-light position-relative rounded-pill" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <button type="button" class="btn btn-light position-relative rounded-pill p-0 " data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             <BiCartAlt className='fs-5' />
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 2

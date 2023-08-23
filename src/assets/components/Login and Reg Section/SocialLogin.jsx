@@ -1,13 +1,13 @@
 import React from 'react';
 import { AiFillFacebook } from 'react-icons/ai';
 import { FcGoogle } from 'react-icons/fc';
-import { FacebookAuthProvider, GoogleAuthProvider, getAuth, getRedirectResult, signInWithPopup, signInWithRedirect } from 'firebase/auth';
+import { FacebookAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../firebase/firebaseConfig';
-import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SocialLogin = () => {
 
-    const [user, setUser] = useState(null);
+    const navigate = useNavigate();
     const auth = getAuth(app);
     const googleProvider = new GoogleAuthProvider();
     const facebookProvider = new FacebookAuthProvider();
@@ -16,7 +16,7 @@ const SocialLogin = () => {
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 const googleUser = result.user;
-                setUser(googleUser)
+                console.log(googleUser);
             })
             .catch(error => {
                 console.log('error', error.message);
@@ -24,11 +24,11 @@ const SocialLogin = () => {
     }
 
     const handleFacebookLogin = () => {
-        e.preventDefault();
         signInWithPopup(auth, facebookProvider)
             .then(result => {
                 const facebookUser = result.user;
-                setUser(facebookUser)
+                console.log(facebookUser);
+                navigate('/');
             })
             .catch(error => {
                 console.log('error', error.message);

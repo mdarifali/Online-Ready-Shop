@@ -51,15 +51,15 @@ const Register = () => {
     }
 
     return (
-        <div class="vh-100">
+        <div className=''>
             <div class="container my-5">
                 <div class="row">
-                    <div class="col-sm-6 text-black bg-light">
-                        <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-5">
+                    <div class="col-lg-6 col-12 text-dark " style={{ backgroundColor: '#ecf0f1' }}>
+                        <div class="p-0 p-xl-5 p-lg-5 p-md-5">
 
-                            <form onSubmit={handleSubmit} style={{ width: "23rem" }}>
+                            <form onSubmit={handleSubmit}>
 
-                                <h5 class="fw-normal mb-3 pb-3" style={{ letterSpacing: "1px" }}>Register Now</h5>
+                                <h5 class="fw-bold text-center my-5">Register Now</h5>
 
                                 <div class="form-outline mb-4">
                                     <input type="text" id='form2Example1' class="form-control form-control-lg" required name='name' />
@@ -85,7 +85,7 @@ const Register = () => {
                                     <button class="btn btn-info btn-lg rounded-0 w-100" type="submit">Sing Up</button>
                                 </div>
                                 <SocialLogin />
-                                <div className='text-center'>
+                                <div className='text-center pb-5'>
                                     <Link className='nav-link' to="/login" >Do you have an account?
                                         <span className='text-danger'>Login here</span>
                                     </Link>
@@ -94,9 +94,8 @@ const Register = () => {
                         </div>
 
                     </div>
-                    <div class="col-sm-6 px-0 d-none d-sm-block">
-                        <img src={reg}
-                            alt="Login image" class="w-100 vh-100 opacity-75" style={{ objectFit: "cover", objectPosition: "left" }} />
+                    <div class="col-lg-6 col-12 px-0 d-none d-lg-block d-xl-block">
+                        <img src={reg}alt="Reg image" class="opacity-75 img-fluid "/>
                     </div>
                 </div>
             </div>

@@ -49,3 +49,13 @@
   }
 }
 
+@media only screen and (max-width: 350px)
+{
+  
+  .col-ex-sm {
+    width: 100% !important ;
+		height: auto;
+
+  }
+  
+}

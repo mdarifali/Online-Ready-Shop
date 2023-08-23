@@ -30,6 +30,7 @@ const Login = () => {
                     'Login Successful',
                     'success'
                 )
+                
                 navigate(form);
             })
             .catch(error => {
@@ -45,14 +46,14 @@ const Login = () => {
 
 
     return (
-        <div class="vh-100">
+        <div class="">
             <div class="container my-5">
                 <div class="row">
-                    <div class="col-sm-6 text-black bg-light">
-                        <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+                    <div class="col-lg-6 col-12 text-black bg-light">
+                        <div class="p-0 p-xl-5 p-lg-5 p-md-5">
 
-                            <form onSubmit={handleSubmit} style={{ width: "23rem" }}>
-                                <h3 class="fw-normal mb-3 pb-3" style={{ letterSpacing: "1px" }}>Log in</h3>
+                            <form onSubmit={handleSubmit}>
+                                <h3 class="fw-bold text-center my-5">Log in</h3>
 
                                 <div class="form-outline mb-4">
                                     <input type="email" id="form2Example18" class="form-control form-control-lg" placeholder='Email'
@@ -70,7 +71,7 @@ const Login = () => {
                                     <button class="btn btn-info btn-lg rounded-0 w-100" type="submit">Sing In</button>
                                 </div>
                                 <SocialLogin />
-                                <div className='text-center'>
+                                <div className='text-center pb-5'>
                                     <p class="small mb-3 pb-lg-2"><Link class="text-muted" to="#">Forgot password?</Link></p>
                                     <Link to="/register" class="nav-link">Don't have an account?
                                         <span className='text-danger'>Register here</span>
@@ -82,9 +83,9 @@ const Login = () => {
                         </div>
 
                     </div>
-                    <div class="col-sm-6 px-0 d-none d-sm-block">
+                    <div class="col-lg-6 px-0 d-none d-lg-block d-xl-block">
                         <img src={login}
-                            alt="Login image" class="w-100 vh-100 opacity-75" style={{ objectFit: "cover", objectPosition: "left" }} />
+                            alt="Login image" class="opacity-75 img-fluid" />
                     </div>
                 </div>
             </div>
