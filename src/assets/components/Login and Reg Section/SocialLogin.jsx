@@ -40,12 +40,14 @@ const SocialLogin = () => {
 
     return (
 
-        <div class="p-2 text-center">
-            <button onClick={handleGoogleLogin} className='btn'>
-                <FcGoogle className='fs-2 me-3' />
+        <div class="text-center mb-4">
+            <button onClick={handleGoogleLogin} className='btn btn-lg w-100 btn-outline-secondary rounded-0 mb-4'>
+                <FcGoogle className='fs-3 me-2' />
+                <small>Continue with Google</small>
             </button>
-            <button onClick={handleFacebookLogin} className='btn'>
-                <AiFillFacebook className='fs-2' style={{ color: '#3b5998' }} />
+            <button onClick={handleFacebookLogin} className='btn btn-lg w-100 btn-outline-secondary rounded-0'>
+                <AiFillFacebook className='fs-3 me-2' style={{ color: '#3b5998' }} />
+                <small>Continue with Facebook</small>
             </button>
         </div>
     );

@@ -49,28 +49,32 @@ const Login = () => {
         <div class="">
             <div class="container my-5">
                 <div class="row">
-                    <div class="col-lg-6 col-12 text-black bg-light">
+                    <div class="col-lg-6 col-12 text-dark" style={{ backgroundColor: '#ecf0f1' }}>
                         <div class="p-0 p-xl-5 p-lg-5 p-md-5">
 
                             <form onSubmit={handleSubmit}>
-                                <h3 class="fw-bold text-center my-5">Log in</h3>
+                                <h5 class="text-center my-5">Log in</h5>
 
-                                <div class="form-outline mb-4">
-                                    <input type="email" id="form2Example18" class="form-control form-control-lg" placeholder='Email'
-                                        required name='email'
-                                    />
+                                <SocialLogin />
+
+                                <div className='mb-4 text-center'>
+                                    <span>or</span>
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <input type="password" id="form2Example28" class="form-control form-control-lg" placeholder='Password'
-                                        required name='password'
-                                    />
+                                    <input type="email" id="form2Example18" class="form-control form-control-lg" required name='email'/>
+                                    <label class="form-label" htmlFor="form2Example18">User Email</label>
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="password" id="form2Example8" class="form-control form-control-lg" required name='password'/>
+                                    <label class="form-label" htmlFor="form2Example8">User Password</label>
                                 </div>
 
                                 <div class="pt-1 mb-4">
                                     <button class="btn btn-info btn-lg rounded-0 w-100" type="submit">Sing In</button>
                                 </div>
-                                <SocialLogin />
+
                                 <div className='text-center pb-5'>
                                     <p class="small mb-3 pb-lg-2"><Link class="text-muted" to="#">Forgot password?</Link></p>
                                     <Link to="/register" class="nav-link">Don't have an account?

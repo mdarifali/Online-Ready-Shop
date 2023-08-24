@@ -54,12 +54,18 @@ const Register = () => {
         <div className=''>
             <div class="container my-5">
                 <div class="row">
-                    <div class="col-lg-6 col-12 text-dark " style={{ backgroundColor: '#ecf0f1' }}>
+                    <div class="col-lg-6 col-12 text-dark" style={{ backgroundColor: '#ecf0f1' }}>
                         <div class="p-0 p-xl-5 p-lg-5 p-md-5">
 
                             <form onSubmit={handleSubmit}>
 
-                                <h5 class="fw-bold text-center my-5">Register Now</h5>
+                                <h5 class="text-center my-5">Register Now</h5>
+
+                                <SocialLogin />
+
+                                <div className='mb-4 text-center'>
+                                    <span>or</span>
+                                </div>
 
                                 <div class="form-outline mb-4">
                                     <input type="text" id='form2Example1' class="form-control form-control-lg" required name='name' />
@@ -84,7 +90,7 @@ const Register = () => {
                                 <div class="pt-1 mb-4">
                                     <button class="btn btn-info btn-lg rounded-0 w-100" type="submit">Sing Up</button>
                                 </div>
-                                <SocialLogin />
+
                                 <div className='text-center pb-5'>
                                     <Link className='nav-link' to="/login" >Do you have an account?
                                         <span className='text-danger'>Login here</span>
