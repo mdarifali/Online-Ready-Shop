@@ -7,6 +7,7 @@ import BestSellers from './BestSellers';
 import Services from './Services';
 import Blogs from './Blogs';
 import Faq from './Faq';
+import NewsLetter from './NewsLetter';
 
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
             <Services />
             {/* <Blogs /> */}
             <Faq />
+            <NewsLetter />
         </div>
     );
 };

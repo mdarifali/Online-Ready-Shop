@@ -11,10 +11,9 @@ const MyProfile = () => {
 
     return (
         <div className='container-fluid my-5'>
-            <div className='text-center'>
-                <h1 className='mb-5 d-inline-flex border-bottom border-info border-3'>Profile Details</h1>
-            </div>
-            <div className="row bg-light">
+            <h3 className='mb-5 text-center'>Profile Details</h3>
+            <hr />
+            <div className="row">
                 <div className="col-12">
                     <div class="p-5 text-center">
                         <img src={user ? user.photoURL : profile} class="rounded-circle mt-4" alt="..." style={{ height: '80px', width: '80px' }} />

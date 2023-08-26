@@ -3,6 +3,7 @@ import Map from './Map';
 import { AiFillFacebook } from 'react-icons/ai';
 import { FcGoogle } from 'react-icons/fc';
 import { IoLogoYoutube } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 
 const Contact = () => {
@@ -14,27 +15,25 @@ const Contact = () => {
                         <Map />
                     </div>
                     <div class="row">
-                        <div className="col-6">
-                            <h4 className='text-center'>Contact Us</h4>
+                        <div className="col-xl-6 col-lg-6 col-12 mb-5 mb-lx-0 mb-lg-0 mb-md-0">
+                            <h4 className='text-info fw-bold mb-5'>Contact Us</h4>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, earum quisquam veritatis perspiciatis ipsam magni?</p>
-                            <div className='my-5'>
+                            <div className='mb-4'>
                                 <span>Email: readyshop@gmail.com</span> <br />
                                 <span>Phone Number: 001122339999</span> <br />
                                 <span>Open hours: 8.00-18.00 Mon-Fri</span> <br />
                                 <span>Sunday: Closed</span>
                             </div>
-                            <div>
-                                <h4>Follow Us</h4>
-                                <FcGoogle  className='fs-2 me-3'/>
-                                <AiFillFacebook className='fs-2 me-3' style={{color: '#3b5998'}}/>
-                                <IoLogoYoutube className='fs-2' style={{color: '#c4302b'}}/>
+                            <div  className='d-flex'>
+                                <h5 className='text-danger me-3'>Follow Us:</h5>
+                                <Link to='#' ><FcGoogle  className='fs-3 me-3'/></Link>
+                                <AiFillFacebook className='fs-3 me-3' style={{color: '#3b5998'}}/>
+                                <IoLogoYoutube className='fs-3' style={{color: '#c4302b'}}/>
                             </div>
                         </div>
-                        <div class="col-6 text-black">
+                        <div class="col-xl-6 col-lg-6 col-12">
                             <form>
-                                <h4 class="fw-normal mb-3 pb-3 text-center" style={{ letterSpacing: "1px" }}>
-                                    Get In Touch With Us!
-                                </h4>
+                                <h4 class="fw-bold text-info mb-5">Get In Touch With Us!</h4>
                                 <div className="row">
                                     <div className="col-6">
                                         <div class="form-outline mb-4">

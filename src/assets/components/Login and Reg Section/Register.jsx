@@ -88,7 +88,7 @@ const Register = () => {
                                 </div>
 
                                 <div class="pt-1 mb-4">
-                                    <button class="btn btn-info btn-lg rounded-0 w-100" type="submit">Sing Up</button>
+                                    <button class="btn btn-success btn-lg rounded-0 w-100" type="submit">Sing Up</button>
                                 </div>
 
                                 <div className='text-center pb-5'>

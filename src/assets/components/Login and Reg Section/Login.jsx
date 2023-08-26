@@ -72,7 +72,7 @@ const Login = () => {
                                 </div>
 
                                 <div class="pt-1 mb-4">
-                                    <button class="btn btn-info btn-lg rounded-0 w-100" type="submit">Sing In</button>
+                                    <button class="btn btn-danger btn-lg rounded-0 w-100" type="submit">Sing In</button>
                                 </div>
 
                                 <div className='text-center pb-5'>
