@@ -17,6 +17,11 @@ import RequireAuth from "./assets/RequireAuth/RequireAuth";
 import AddProduct from "./assets/components/Dashboard Section/AddProduct";
 import ManageProduct from "./assets/components/Dashboard Section/ManageProduct";
 import ManageUser from "./assets/components/Dashboard Section/ManageUser";
+import NotFound from "./assets/components/Not Found-404/NotFound";
+import Men from "./assets/components/Products Data Section/Men";
+import AllProducts from "./assets/components/Products Data Section/AllProducts";
+import Women from "./assets/components/Products Data Section/Women";
+import Accessories from "./assets/components/Products Data Section/Accessories";
 
 
 function App() {
@@ -32,20 +37,29 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path='/single-porduct/:id' element={<SingleProduct />} />
-        <Route path="/shop" element={<Shop />} />
         <Route path="/blogs" element={<AllBlogs />} />
+        <Route path="*" element={<NotFound />} />
 
+        {/* Shop Route and Product Category */}
+        <Route path="shop" element={<Shop />}>
+          <Route index element={<AllProducts />} />
+          <Route path="men" element={<Men />} />
+          <Route path="women" element={<Women />} />
+          <Route path="accessories" element={<Accessories />} />
+        </Route>
+
+        {/* Admin Route and Dashboard Category */}
         <Route path='dashboard' element={
           <RequireAuth>
             <Dashboard />
           </RequireAuth>}>
-        <Route index element={<MyProfile />} />
-        <Route path="order" element={<MyOrder />} />
-        <Route path="profile" element={<MyProfile />} />
-        <Route path="add-product" element={<AddProduct />} />
-        <Route path="manage-product" element={<ManageProduct />} />
-        <Route path="manage-user" element={<ManageUser />} />
-      </Route>
+          <Route index element={<MyProfile />} />
+          <Route path="order" element={<MyOrder />} />
+          <Route path="profile" element={<MyProfile />} />
+          <Route path="add-product" element={<AddProduct />} />
+          <Route path="manage-product" element={<ManageProduct />} />
+          <Route path="manage-user" element={<ManageUser />} />
+        </Route>
       </Routes>
       <Footer />
     </>

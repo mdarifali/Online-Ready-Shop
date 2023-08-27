@@ -1,7 +1,7 @@
-import React from 'react';
-import AllProducts from '../Products Data Section/AllProducts';
+import './shop.css';
 import Services from '../Home Section/Services';
 import NewsLetter from '../Home Section/NewsLetter';
+import { Link, Outlet } from 'react-router-dom';
 
 const Shop = () => {
 
@@ -10,27 +10,27 @@ const Shop = () => {
             <div className='container my-5'>
                 <div className="row gx-5">
                     <div className="col col-lg-2 col-md-2 order-lg-1 order-md-1 order-2">
-                        <p className='fw-bold'>Product Category</p>
+                        <p className='fw-bold'>Category</p>
                         <ul className='nav flex-column my-4'>
-                            <li className='nav-item'>
-                                <a href="" className='nav-link text-dark px-0'>Men</a>
+                            <li className='hover-class'>
+                                <Link to="/shop/men" className='nav-link text-dark px-2'>Men</Link>
                             </li>
-                            <li className='nav-item'>
-                                <a href="" className='nav-link text-dark px-0'>Women</a>
+                            <li className='hover-class'>
+                                <Link to="/shop/women" className='nav-link text-dark px-2'>Women</Link>
                             </li>
-                            <li className='nav-item'>
-                                <a href="" className='nav-link text-dark px-0'>Accessories</a>
+                            <li className='hover-class'>
+                                <Link to="/shop/accessories" className='nav-link text-dark px-2'>Accessories</Link>
                             </li>
-                            <li className='nav-item'>
-                                <a href="" className='nav-link text-dark px-0'>New Arrivals</a>
+                            <li className='hover-class'>
+                                <Link to="#" className='nav-link text-dark px-2'>New Arrivals</Link>
                             </li>
-                            <li className='nav-item'>
-                                <a href="" className='nav-link text-dark px-0'>Collection</a>
+                            <li className='hover-class'>
+                                <Link to="#" className='nav-link text-dark px-2'>Collection</Link>
                             </li>
                         </ul>
                         <hr />
                         <div className='my-5'>
-                            <p className='fw-bold mb-5'>Filter by Price</p>
+                            <p className='fw-bold mb-5'>Price</p>
                             <p className='fw-bold text-danger'>$0 - $580</p>
                             <input type="range" class="form-range" min="0" max="580" id="customRange2"></input>
                             <button className='btn btn-dark rounded-0 btn-sm mt-3 px-5'>FILTER</button>
@@ -85,14 +85,14 @@ const Shop = () => {
                         </div>
                     </div>
                     <div className="col col-lg-10 col-md-10 order-lg-2 order-md-2 order-1">
-                        <AllProducts />
+                        <Outlet />
                         <div className='my-5 float-end'>
                             <ul class="pagination text-dark">
-                                <li class="page-item"><a class="page-link text-dark" href="#">Previous</a></li>
-                                <li class="page-item"><a class="page-link text-danger" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link text-danger" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link text-danger" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link text-dark" href="#">Next</a></li>
+                                <li class="page-item"><a class="page-link text-dark" to="#">Previous</a></li>
+                                <li class="page-item"><a class="page-link text-danger" to="#">1</a></li>
+                                <li class="page-item"><a class="page-link text-danger" to="#">2</a></li>
+                                <li class="page-item"><a class="page-link text-danger" to="#">3</a></li>
+                                <li class="page-item"><a class="page-link text-dark" to="#">Next</a></li>
                             </ul>
                         </div>
                     </div>

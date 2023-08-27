@@ -1,41 +1,30 @@
-import React from 'react';
-import product00 from '../../images/product_8.png';
-import product8 from '../../images/product_8.png';
-import product6 from '../../images/product_6.png';
+import useHook from '../Use Hooks/useHook';
+import './products.css';
+import { Link } from 'react-router-dom';
 
 const Accessories = () => {
+
+    const [products] = useHook()
+    const accessories = products.filter(item => item.category === 'Accessories');
+
     return (
-        <div className='row g-3'>
-            <div className="col-md-4 col-lg-3 col-6">
-                <div class="card shadow rounded-0">
-                    <img src={product00} class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div className='row g-5'>
+            {
+                accessories.map((product) => {
+
+                    return <div className="col-md-4 col-lg-3 col-6 col-ex-sm">
+                        <div class="card card-body-hover">
+                            <Link to={`/single-porduct/${product._id}`} class="nav-link">
+                                <img src={product.image} class="card-img-top card-img" alt="product Image" />
+                                <div class="card-body">
+                                    <p class="card-title">{product.name}</p>
+                                    <span class="card-text text-danger fw-bolder">${product.price}</span>
+                                </div>
+                            </Link>
+                        </div>
                     </div>
-                    <a href="#" class="btn btn-outline-danger rounded-0">Add to Cart</a>
-                </div>
-            </div>
-            <div className="col-md-4 col-lg-3 col-6">
-                <div class="card shadow rounded-0">
-                    <img src={product6} class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <a href="#" class="btn btn-outline-danger rounded-0">Add to Cart</a>
-                </div>
-            </div>
-            <div className="col-md-4 col-lg-3 col-6">
-                <div class="card shadow rounded-0">
-                    <img src={product8} class="card-img-top" alt="..." />
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <a href="#" class="btn btn-outline-danger rounded-0">Add to Cart</a>
-                </div>
-            </div>
+                })
+            }
         </div>
     );
 };

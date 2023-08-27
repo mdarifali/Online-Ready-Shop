@@ -29,23 +29,23 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                    
+
                     <div className=''>
                         <p className='text-light'>Download App</p>
                         <div className=" mb-2">
                             <Link to='#'>
-                                <img src={app1} alt="" style={{width: '130px', height: 'auto'}}/>
+                                <img src={app1} alt="" style={{ width: '130px', height: 'auto' }} />
                             </Link>
                         </div>
                         <div>
                             <Link to='#'>
-                                <img src={app2} alt="" style={{width: '130px', height: 'auto'}}/>
+                                <img src={app2} alt="" style={{ width: '130px', height: 'auto' }} />
                             </Link>
                         </div>
                     </div>
                 </div>
                 <div className='d-flex justify-content-center'>
-                    <img src={payment} alt="" className='img-fluid'/>
+                    <img src={payment} alt="" className='img-fluid' />
                 </div>
                 <div className="mt-3">
                     <div className=" text-center">
@@ -54,16 +54,16 @@ const Footer = () => {
                 </div>
             </div>
             <div className='d-flex justify-content-center bg-white text-danger py-2'>
-                <a class="nav-link me-4" href="#">
+                <a class="nav-link me-4" to="#">
                     <RiFacebookFill className='fs-4' />
                 </a>
-                <a class="nav-link me-4" href="#">
+                <a class="nav-link me-4" to="#">
                     <RiTwitterFill className='fs-4' />
                 </a>
-                <a class="nav-link me-4" href="#">
+                <a class="nav-link me-4" to="#">
                     <RiInstagramFill className='fs-4' />
                 </a>
-                <a class="nav-link me-4" href='/'>
+                <a class="nav-link me-4" to='/'>
                     <RiYoutubeFill className='fs-4' />
                 </a>
             </div>

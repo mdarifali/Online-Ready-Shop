@@ -1,9 +1,8 @@
-import React from 'react';
 import './home.css';
 import AllProducts from '../Products Data Section/AllProducts';
 import Women from '../Products Data Section/Women';
 import Men from '../Products Data Section/Men';
-import './home.css';
+import Accessories from '../Products Data Section/Accessories';
 
 const NewArrivals = () => {
     return (
@@ -36,7 +35,7 @@ const NewArrivals = () => {
                             <Men />                
                         </div>
                         <div class="tab-pane fade" id="pills-contact2" role="tabpanel" aria-labelledby="pills-contact2-tab">
-                            <Men />                
+                            <Accessories />                
                         </div>
                     </div>
                 </div>

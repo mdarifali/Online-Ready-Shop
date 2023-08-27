@@ -11,31 +11,31 @@ const TopNavber = () => {
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item dropdown me-3">
-                                <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link text-light dropdown-toggle" to="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <small>USD</small>
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style={{ zIndex: '1025' }}>
-                                    <li><a class="dropdown-item" href="#"><small>GBP</small></a></li>
+                                    <li><a class="dropdown-item" to="#"><small>GBP</small></a></li>
                                     <hr />
-                                    <li><a class="dropdown-item" href="#"><small>AUD</small></a></li>
+                                    <li><a class="dropdown-item" to="#"><small>AUD</small></a></li>
                                     <hr />
-                                    <li><a class="dropdown-item" href="#"><small>EUR</small></a></li>
+                                    <li><a class="dropdown-item" to="#"><small>EUR</small></a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown me-3">
-                                <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link text-light dropdown-toggle" to="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <small>English</small>
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style={{ zIndex: '1025' }}>
-                                    <li><a class="dropdown-item" href="#"><small>Spanish</small></a></li>
+                                    <li><a class="dropdown-item" to="#"><small>Spanish</small></a></li>
                                     <hr />
-                                    <li><a class="dropdown-item" href="#"><small>French</small></a></li>
+                                    <li><a class="dropdown-item" to="#"><small>French</small></a></li>
                                     <hr />
-                                    <li><a class="dropdown-item" href="#"><small>Italian</small></a></li>
+                                    <li><a class="dropdown-item" to="#"><small>Italian</small></a></li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown me-3">
-                                <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link text-light dropdown-toggle" to="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <small>My Account</small>
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style={{ zIndex: '1025' }}>

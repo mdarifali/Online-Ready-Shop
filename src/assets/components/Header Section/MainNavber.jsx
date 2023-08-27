@@ -54,11 +54,11 @@ const MainNavber = () => {
                         </div>
                     </div>
                     <div class="d-flex order-2 dropdown align-items-center">
-                        <a class="nav-link text-dark" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-                            <BiSearchAlt className='fs-5 me-2 me-lg-5 me-md-5 me-xl-5'/>
+                        <a class="nav-link text-dark" to="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+                            <BiSearchAlt className='fs-5 me-2 me-lg-5 me-md-5 me-xl-5' />
                         </a>
-                        <a class="nav-link text-dark" href="#" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"
-                        ><BiUser className='fs-5 me-2 me-lg-5 me-md-5 me-xl-5'/></a>
+                        <a class="nav-link text-dark" to="#" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"
+                        ><BiUser className='fs-5 me-2 me-lg-5 me-md-5 me-xl-5' /></a>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <li><Link class="dropdown-item" to="/dashboard">My Dashboard</Link></li>
                             {user ?
@@ -103,11 +103,11 @@ const MainNavber = () => {
                         <div className="col">
                             <small>Branded Hoddy (coffee color) </small>
                             <div className='d-flex flex-row align-items-center mt-2'>
-                                <span onClick={() => dispatch (increment())} >
+                                <span onClick={() => dispatch(increment())} >
                                     <AiOutlinePlus className='fs-4' />
                                 </span>
                                 <input type="text" value={count} className='form-control text-info f text-center mx-1 rounded-pill' style={{ width: '50px' }} />
-                                <span onClick={() => dispatch (decrement())} >
+                                <span onClick={() => dispatch(decrement())} >
                                     <AiOutlineMinus className='fs-4' />
                                 </span>
                             </div>

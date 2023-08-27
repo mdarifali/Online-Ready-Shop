@@ -1,0 +1,13 @@
+.hover-class {
+    transition: all 0.50s ease;
+    margin-bottom: 20px;
+    background-color: aliceblue;
+}
+
+.hover-class:hover {
+    background-color: rgb(132, 206, 240);
+}
+
+.hover-class a :hover{
+    color: white;
+}

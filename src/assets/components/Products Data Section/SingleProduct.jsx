@@ -13,16 +13,17 @@ import { useParams } from 'react-router-dom';
 const SingleProduct = () => {
 
     const { id } = useParams();
-     
+
     const [products, setProducts] = useState([]);
-    const {image, name, price, category, description} = products
+    const { image, name, price, category, description } = products
 
     useEffect(() => {
 
         const url = `http://localhost:5000/product/${id}`;
         fetch(url)
             .then(res => res.json())
-            .then(data => { setProducts(data) 
+            .then(data => {
+                setProducts(data)
             });
 
     }, [id]);
@@ -71,7 +72,8 @@ const SingleProduct = () => {
                     </div>
                     <div className="col-lg-6 mt-5 mt-lg-0 mt-md-0">
                         <div className='w-100'>
-                            <h3>{name}</h3>
+                            <small className='text-muted'>{category}</small>
+                            <h4 className='text-uppercase fw-bold'>{name}</h4>
                             <p>{description}</p>
                         </div>
                         <div className='p-3 bg-light d-flex flex-row align-items-center justify-content-center' style={{ marginTop: '60px' }}>
@@ -98,19 +100,32 @@ const SingleProduct = () => {
                                 </span>
                             </div>
                         </div>
-                        <div className='mt-4 d-flex flex-row align-items-center'>
-                            <span className='me-3'>Select Color:</span>
-                            <select class="form-select w-25">
-                                <option value="1">Red</option>
-                                <option value="2">White</option>
-                                <option value="3">Yellow</option>
-                            </select>
+                        <div className='mt-4 d-xl-flex d-lg-flex d-md-flex  align-items-center '>
+                            <span className='me-3'>Color:</span>
+                            <div class="form-check me-4 mb-3 mb-xl-0 mb-lg-0 mb-md-0 mt-3 mt-xl-0 mt-lg-0 mt-mb-0">
+                                <input class="form-check-input bg-dark" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    black
+                                </label>
+                            </div>
+                            <div class="form-check me-4 mb-3 mb-xl-0 mb-lg-0 mb-md-0">
+                                <input class="form-check-input bg-danger" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Red
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input bg-warning" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Yellow
+                                </label>
+                            </div>
                         </div>
                         <div className='mt-4 d-flex flex-row align-items-center'>
                             <span className='me-2'>Quantity:</span>
                             <div className='d-flex flex-row align-items-center'>
                                 <button onClick={increment} className='btn'><AiOutlinePlusCircle className='fs-5' /></button>
-                                <input type="text" value={count} className='form-control text-center' style={{ width: '50px' }} />
+                                <input type="text" value={count} className='form-control text-center rounded-0 border border-info' style={{ width: '60px' }} />
                                 <button onClick={deincrement} className='btn'><AiOutlineMinusCircle className='fs-5' /></button>
                             </div>
                         </div>
@@ -142,8 +157,8 @@ const SingleProduct = () => {
                                 <div className="col-lg-5">
                                     <div className='fs-5 mb-5 d-inline-flex border-bottom border-info border-2'>Description</div>
                                     <div className='my-5'>
-                                        <h3>Pocket cotton sweatshirt</h3>
-                                        <p>Nam tempus turpis at metus scelerisque placerat nulla deumantos solicitud felis. Pellentesque diam dolor, elementum etos lobortis des mollis ut...</p>
+                                        <h3>{name}</h3>
+                                        <p>{description}</p>
                                     </div>
                                     <img src={image} alt="" className='my-5 img-fluid' />
                                     <div className='my-5'>
