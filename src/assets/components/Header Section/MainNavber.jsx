@@ -53,7 +53,6 @@ const MainNavber = () => {
                         <div class="navbar-nav m-auto fw-bold">
                             <Link class="nav-link text-dark me-4 link-hover" to="/"><small>HOME</small></Link>
                             <Link class="nav-link text-dark me-4 link-hover" to="/shop"><small>SHOP</small></Link>
-                            <Link class="nav-link text-dark me-4 link-hover" to="#"><small>Dashboard</small></Link>
                             <Link class="nav-link text-dark me-4 link-hover" to="/blogs"><small>BLOG</small></Link>
                             <Link class="nav-link text-dark me-4 link-hover" to='/contact'><small>CONTACT</small></Link>
                         </div>
