@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Swal from 'sweetalert2'
 import './header.css';
 import { BiSearchAlt, BiUser, BiCartAlt } from "react-icons/bi";
@@ -9,16 +9,21 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { getAuth, signOut } from 'firebase/auth';
 import app from '../../firebase/firebaseConfig';
 import { useDispatch, useSelector } from 'react-redux';
-import { increment, decrement } from '../../redux/features/counter/counterSlice';
+import { getCartTotal } from '../../redux/features/counter/cartSlice';
 
 const MainNavber = () => {
 
-    const count = useSelector((state) => state.counter.count)
-    const dispatch = useDispatch()
 
     const auth = getAuth(app)
     const [user] = useAuthState(auth)
     const navigate = useNavigate()
+
+    // const {  totalQuantity } = useSelector((state) => state.allCart);
+    // const dispatch = useDispatch();
+
+    // useEffect(() => {
+    //   dispatch(getCartTotal());
+    // }, []);
 
     const handleLogout = () => {
         signOut(auth)
@@ -69,10 +74,10 @@ const MainNavber = () => {
                             }
 
                         </ul>
-                        <button type="button" class="btn btn-light position-relative rounded-pill p-0 " data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <button type="button" class="btn btn-light position-relative p-0 " data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                             <BiCartAlt className='fs-5' />
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                2
+                               2
                             </span>
                         </button>
                     </div>
@@ -103,11 +108,11 @@ const MainNavber = () => {
                         <div className="col">
                             <small>Branded Hoddy (coffee color) </small>
                             <div className='d-flex flex-row align-items-center mt-2'>
-                                <span onClick={() => dispatch(increment())} >
+                                <span >
                                     <AiOutlinePlus className='fs-4' />
                                 </span>
-                                <input type="text" value={count} className='form-control text-info f text-center mx-1 rounded-pill' style={{ width: '50px' }} />
-                                <span onClick={() => dispatch(decrement())} >
+                                <input type="text" className='form-control text-info f text-center mx-1 rounded-pill' style={{ width: '50px' }} />
+                                <span>
                                     <AiOutlineMinus className='fs-4' />
                                 </span>
                             </div>

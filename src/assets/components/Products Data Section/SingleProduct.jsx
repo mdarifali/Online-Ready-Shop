@@ -8,14 +8,16 @@ import { useState, useEffect } from 'react';
 import Services from '../Home Section/Services';
 import NewsLetter from '../Home Section/NewsLetter';
 import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { handleAddToCart } from '../../redux/features/counter/cartSlice';
 
 
 const SingleProduct = () => {
 
     const { id } = useParams();
-
     const [products, setProducts] = useState([]);
     const { image, name, price, category, description } = products
+    const dispatch = useDispatch();
 
     useEffect(() => {
 
@@ -27,7 +29,7 @@ const SingleProduct = () => {
             });
 
     }, [id]);
-
+   
     // const [changeImage, setChangeImage] = useState(images[0])
 
     const [count, setCount] = useState(1);
@@ -129,7 +131,7 @@ const SingleProduct = () => {
                                 <button onClick={deincrement} className='btn'><AiOutlineMinusCircle className='fs-5' /></button>
                             </div>
                         </div>
-                        <button className='btn btn-danger rounded-0 mt-5'>ADD TO CART</button>
+                        <button onClick={ () => dispatch (handleAddToCart(products))} className='btn btn-danger rounded-0 mt-5'>ADD TO CART</button>
                     </div>
                 </div>
                 <hr />

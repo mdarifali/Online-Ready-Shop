@@ -9,8 +9,8 @@ const Shop = () => {
         <>
             <div className='container my-5'>
                 <div className="row gx-5">
-                    <div className="col col-lg-2 col-md-2 order-lg-1 order-md-1 order-2">
-                        <p className='fw-bold'>Category</p>
+                    <div className="col-12 col-lg-2 col-md-2 order-lg-1 order-md-1 order-2">
+                        <p className='fw-bold text-xl-start text-lg-start text-center'>Category</p>
                         <ul className='nav flex-column my-4'>
                             <li className='hover-class'>
                                 <Link to="/shop/men" className='nav-link text-dark px-2'>Men</Link>
@@ -30,14 +30,14 @@ const Shop = () => {
                         </ul>
                         <hr />
                         <div className='my-5'>
-                            <p className='fw-bold mb-5'>Price</p>
+                            <p className='fw-bold mb-5 text-xl-start text-lg-start text-center'>Price</p>
                             <p className='fw-bold text-danger'>$0 - $580</p>
                             <input type="range" class="form-range" min="0" max="580" id="customRange2"></input>
                             <button className='btn btn-dark rounded-0 btn-sm mt-3 px-5'>FILTER</button>
                         </div>
                         <hr />
                         <div className='my-5'>
-                            <p className='fw-bold mb-5'>Sizes</p>
+                            <p className='fw-bold mb-5 text-xl-start text-lg-start text-center'>Sizes</p>
                             <div class="form-check mb-3">
                                 <input class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault" />
                                 <label class="form-check-label" for="flexCheckDefault">S</label>
@@ -61,7 +61,7 @@ const Shop = () => {
                         </div>
                         <hr />
                         <div className='my-5'>
-                            <p className='fw-bold mb-5'>Colors</p>
+                            <p className='fw-bold mb-5 text-xl-start text-lg-start text-center'>Colors</p>
                             <div class="form-check mb-3">
                                 <input class="form-check-input me-3" type="checkbox" value="" id="flexCheckDefault" />
                                 <label class="form-check-label" for="flexCheckDefault">Black</label>
@@ -84,7 +84,7 @@ const Shop = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col col-lg-10 col-md-10 order-lg-2 order-md-2 order-1">
+                    <div className="col-12 col-lg-10 col-md-10 order-lg-2 order-md-2 order-1">
                         <Outlet />
                         <div className='my-5 float-end'>
                             <ul class="pagination text-dark">
