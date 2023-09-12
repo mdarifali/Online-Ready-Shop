@@ -2,46 +2,35 @@ import "./products.css";
 import { BsTruck } from "react-icons/bs";
 import review1 from "../../images/Review-1.jpg";
 import review2 from "../../images/Review-2.jpg";
-import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai";
 import {
   TiStarFullOutline,
   TiStarHalfOutline,
   TiStarOutline,
 } from "react-icons/ti";
-import { useState, useEffect } from "react";
 import Services from "../Home Section/Services";
 import NewsLetter from "../Home Section/NewsLetter";
 import { useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { handleAddToCart } from "../../redux/features/counter/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { handleAddToCart } from "../../redux/features/cart/cartSlice";
 
 const SingleProduct = () => {
   const { id } = useParams();
-  const [products, setProducts] = useState([]);
-  const { image, name, price, category, description } = products;
+  const items = useSelector((state) => state.allCart.products);
+  const product = items.find(data => data._id === id);
+  const { image, name, price, category, description, quantity, _id } = product;
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    const url = `http://localhost:5000/product/${id}`;
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data);
-      });
-  }, [id]);
+  // useEffect(() => {
+  //   const url = `http://localhost:5000/product/${id}`;
+  //   fetch(url)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setProducts(data);
+  //     });
+  // }, [id]);
 
   // const [changeImage, setChangeImage] = useState(images[0])
-
-  const [count, setCount] = useState(1);
-
-  const increment = () => {
-    setCount(parseInt(count) + 1);
-  };
-
-  const deincrement = () => {
-    setCount(parseInt(count) - 1);
-  };
-
+;
   return (
     <>
       <div className="container my-5">
@@ -86,7 +75,7 @@ const SingleProduct = () => {
               <span className="text-danger fw-bolder">FREE DELIVERY</span>
             </div>
             <div className="mt-5">
-              <h4 className="text-danger fw-bolder me-4">${price}</h4>
+              <h4 className="text-danger fw-bold me-4">${price}</h4>
               <div className="d-inline pt-3">
                 <span>
                   <TiStarFullOutline className="fs-5 text-warning" />
@@ -141,25 +130,25 @@ const SingleProduct = () => {
                 </label>
               </div>
             </div>
-            <div className="mt-4 d-flex flex-row align-items-center">
+            {/* <div className="mt-4 d-flex flex-row align-items-center">
               <span className="me-2">Quantity:</span>
               <div className="d-flex flex-row align-items-center">
-                <button onClick={increment} className="btn">
+                <button onClick={() => dispatch(increaseItemQuantity(_id))} className="btn">
                   <AiOutlinePlusCircle className="fs-5" />
                 </button>
                 <input
                   type="text"
-                  value={count}
+                  value={quantity}
                   className="form-control text-center rounded-0 border border-info"
                   style={{ width: "60px" }}
                 />
-                <button onClick={deincrement} className="btn">
+                <button onClick={() => dispatch(decreaseItemQuantity(_id))} className="btn">
                   <AiOutlineMinusCircle className="fs-5" />
                 </button>
               </div>
-            </div>
+            </div> */}
             <button
-              onClick={() => dispatch(handleAddToCart(products))}
+              onClick={() => dispatch(handleAddToCart(product))}
               className="btn btn-danger rounded-0 mt-5"
             >
               ADD TO CART

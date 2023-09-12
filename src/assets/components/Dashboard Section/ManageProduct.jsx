@@ -42,7 +42,7 @@ const ManageProduct = () => {
 
 
     return (
-        <div className='container-fluid my-5 '>
+        <div className='container my-5 '>
             <h3 className='mb-5 text-center'>Manage Product</h3>
             <hr />
             <div className='table-responsive'>

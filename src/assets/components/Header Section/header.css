@@ -1,11 +1,15 @@
 .link-hover{
+    color: rgb(53, 51, 51);
+    padding: 5px 10px;
+    font-weight: normal;
+    margin-right: 15px;
+    text-decoration: none;
     transition: .50s ease;
 }
 .link-hover:hover{
-    background-color: rgb(73, 73, 73);
+    background-color:rgb(13, 187, 187);
 }
 
 .link-hover:hover small{
-    color: rgb(0, 204, 255);
-    font-weight: 500;
+    color: whitesmoke;
 }

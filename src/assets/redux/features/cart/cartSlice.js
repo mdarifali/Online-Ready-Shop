@@ -1,14 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
+import {apiData} from "../../../components/apiData";
+
 
 
 const initialState = { 
     cart: [],
-    products: 'http://localhost:5000/product',
+    products: apiData,
     totalQuantity: 0,
     totalPrice: 0,
  };
-
-
 
 export const CartSlice  = createSlice({
     
@@ -17,8 +17,7 @@ export const CartSlice  = createSlice({
     reducers: {
 
         handleAddToCart : (state, action) => {
-          console.log(state);
-            let find = state.cart.findIndex((item) => item.id === action.payload.id);
+            let find = state.cart.findIndex((item) => item._id === action.payload._id);
             if (find  >= 0) {
                 state.cart[find].quantity += 1;
             }
@@ -30,10 +29,7 @@ export const CartSlice  = createSlice({
         getCartTotal: (state) => {
             let { totalQuantity, totalPrice } = state.cart.reduce(
               (cartTotal, cartItem) => {
-                console.log("carttotal", cartTotal);
-                console.log("cartitem", cartItem);
                 const { price, quantity } = cartItem;
-                console.log(price, quantity);
                 const itemTotal = price * quantity;
                 cartTotal.totalPrice += itemTotal;
                 cartTotal.totalQuantity += quantity;
@@ -49,12 +45,14 @@ export const CartSlice  = createSlice({
           },
 
           removeItem: (state, action) => {
-            state.cart = state.cart.filter((item) => item.id !== action.payload);
+            state.cart = state.cart.filter((item) => item._id !== action.payload);
+            console.log(state.cart);
           },
 
           increaseItemQuantity: (state, action) => {
+
             state.cart = state.cart.map((item) => {
-              if (item.id === action.payload) {
+              if (item._id === action.payload) {
                 return { ...item, quantity: item.quantity + 1 };
               }
               return item;
@@ -63,7 +61,7 @@ export const CartSlice  = createSlice({
 
           decreaseItemQuantity: (state, action) => {
             state.cart = state.cart.map((item) => {
-              if (item.id === action.payload) {
+              if (item._id === action.payload) {
                 return { ...item, quantity: item.quantity - 1 };
               }
               return item;

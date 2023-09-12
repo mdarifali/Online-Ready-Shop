@@ -1,0 +1,31 @@
+.footer-menu {
+    text-decoration: none;
+    color: #5b5e5e;
+    transition: .50s ease;
+    font-weight: normal;
+}
+
+.footer-menu:hover {
+    color: rgb(13, 187, 187);
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #404242;
+    transition: .50s ease;
+}
+
+.social-hover {
+    margin-right: 20px;
+    padding: 6px;
+    border-radius: 50%;
+    transition: .50s ease;
+}
+
+.social-hover:hover {
+    background-color: rgb(13, 187, 187);
+}
+
+.social-hover:hover .social-icon{
+    color: rgb(255, 255, 255);
+}

@@ -6,6 +6,7 @@ import {
   RiYoutubeFill,
   RiHeartFill,
 } from "react-icons/ri";
+import './footer.css';
 import app1 from "../../images/app.png";
 import app2 from "../../images/app2.png";
 import payment from "../../images/payment-method.png";
@@ -34,25 +35,25 @@ const Footer = () => {
           <div className="col-lg-4 col-md-4 col-12  mb-5 mb-xl-0 mb-lg-0 mb-md-0">
             <div className="text-start text-xl-center text-lg-center text-md-center">
               <span className="text-white">Menu Items</span>
-              <div className="navbar-dark ">
+              <div className="navbar-dark mt-3 ">
                 <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <Link class="nav-link" to="/">
+                  <li class="nav-item mb-2">
+                    <Link class="footer-menu" to="/">
                       News
                     </Link>
                   </li>
-                  <li class="nav-item">
-                    <Link class="nav-link" to="/shop">
+                  <li class="nav-item mb-2">
+                    <Link class="footer-menu" to="/shop">
                       Shop
                     </Link>
                   </li>
-                  <li class="nav-item">
-                    <Link class="nav-link" to="/blogs">
+                  <li class="nav-item mb-2">
+                    <Link class="footer-menu" to="/blogs">
                       Blog
                     </Link>
                   </li>
                   <li class="nav-item">
-                    <Link class="nav-link" to="/contact">
+                    <Link class="footer-menu" to="/contact">
                       Contact
                     </Link>
                   </li>
@@ -100,18 +101,18 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="d-flex justify-content-center bg-light text-danger py-3">
-        <a class="nav-link me-4" to="#">
-          <RiFacebookFill className="fs-4" />
+      <div className="d-flex justify-content-center bg-light py-2">
+        <a class="social-hover" to="#">
+          <RiFacebookFill className="social-icon" />
         </a>
-        <a class="nav-link me-4" to="#">
-          <RiTwitterFill className="fs-4" />
+        <a class="social-hover" to="#">
+          <RiTwitterFill className="social-icon" />
         </a>
-        <a class="nav-link me-4" to="#">
-          <RiInstagramFill className="fs-4" />
+        <a class="social-hover" to="#">
+          <RiInstagramFill className="social-icon" />
         </a>
-        <a class="nav-link me-4" to="/">
-          <RiYoutubeFill className="fs-4" />
+        <a class="social-hover" to="/">
+          <RiYoutubeFill className="social-icon" />
         </a>
       </div>
     </div>

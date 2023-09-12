@@ -22,6 +22,7 @@ import Men from "./assets/components/Products Data Section/Men";
 import AllProducts from "./assets/components/Products Data Section/AllProducts";
 import Women from "./assets/components/Products Data Section/Women";
 import Accessories from "./assets/components/Products Data Section/Accessories";
+import Cart from "./assets/components/Cart Section/Cart";
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <Route path='/single-porduct/:id' element={<SingleProduct />} />
         <Route path="/blogs" element={<AllBlogs />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/cart" element={<Cart/>} />
 
         {/* Shop Route and Product Category */}
         <Route path="shop" element={<Shop />}>

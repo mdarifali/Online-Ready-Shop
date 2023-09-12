@@ -10,10 +10,9 @@ const ProductCard = ({ product }) => {
             <div class="card card-body-hover">
                 <Link to={`/single-porduct/${product._id}`} class="nav-link">
                     <img src={image} class="card-img-top card-img" alt="product Image" />
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <p class="card-title">{name}</p>
-                        <span class="card-text text-danger fw-bolder">${price}</span>
-                        <p className='card-text'>{description.slice(0, 50)}..See more</p>
+                        <span class="card-text fw-bolder">${price}</span>
                     </div>
                 </Link>
             </div>
