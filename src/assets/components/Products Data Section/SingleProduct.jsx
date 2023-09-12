@@ -66,13 +66,13 @@ const SingleProduct = () => {
               <p>{description}</p>
             </div>
             <div
-              className="p-3 bg-light d-flex flex-row align-items-center justify-content-center"
+              className="p-2 bg-light d-flex flex-row align-items-center justify-content-center"
               style={{ marginTop: "60px" }}
             >
               <span>
                 <BsTruck className="fs-4 me-4" />
               </span>
-              <span className="text-danger fw-bolder">FREE DELIVERY</span>
+              <small>FREE DELIVERY</small>
             </div>
             <div className="mt-5">
               <h4 className="text-danger fw-bold me-4">${price}</h4>

@@ -1,8 +1,9 @@
 import "./cart.css";
+import noCart from "../../images/Cart.jpg";
 import noImage from "../../images/no-image.png";
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { BsXLg } from "react-icons/bs";
+import { BsTypeH1, BsXLg } from "react-icons/bs";
 import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai";
 import {
   FaArrowRight,
@@ -42,66 +43,50 @@ const Cart = () => {
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col">
           <div class="card">
-            <div class="card-body p-4">
+            <div class="card-body">
               <div class="row">
-                <div class="col-lg-7">
-                    <Link to="/shop" class="text-dark nav-link mb-4">
-                      <FaArrowLeft className="fs-4" />{" "}
-                      <span>Continue Shopping</span>
-                    </Link>
+                <div class="col-lg-7 mb-5 mb-xl-0 mb-lg-0 mb-md-0">
+                  <Link to="/shop" class="text-dark nav-link mb-4">
+                    <FaArrowLeft className="fs-4" />{" "}
+                    <span>Continue Shopping</span>
+                  </Link>
 
                   <hr />
 
                   <div class="d-flex justify-content-between align-items-center mb-4">
-                    <div className="d-none d-xl-block d-lg-block">
+                    <div className="d-none d-xl-block d-lg-block d-md-block">
                       <p>Shopping Cart</p>
                     </div>
                     <div>
                       <p>
-                        Total Cart Items:{" "}
+                        Total Items:{" "}
                         <span className="fw-bold">{cart.length}</span>
                       </p>
                     </div>
                   </div>
 
-                  {cart.map((data) => (
-                    <div class="card mb-4 shadow">
-                      <div class="card-body">
+                  {
+                    cart.length ?
+                    cart.map((data) => (
+                      <div class="card shadow mb-4">
+                        <div class="card-body">
                           <div class="d-flex flex-row align-items-center">
                             <div className="col-md-4 col-lg-4 col-xl-4">
                               <div className="text-center">
                                 <img
                                   src={data.image}
-                                  class="img-fluid rounded-3"
+                                  class="img-fluid"
                                   alt="Shopping item"
                                   style={{ width: "80px" }}
                                 />
-                                <div>
+                                <div className="d-none d-xl-block d-lg-block d-md-block">
                                   <span>{data.name}</span>
                                 </div>
                               </div>
                             </div>
-
+  
                             <div class="col-md-4 col-lg-4 col-xl-4 col-6">
                               <div className="d-flex justify-content-center align-items-center">
-                                <button
-                                  class="btn btn-transparent"
-                                  onClick={() =>
-                                    dispatch(decreaseItemQuantity(data._id))
-                                  }
-                                >
-                                  <AiOutlineMinusCircle className="fs-4" />
-                                </button>
-
-                                <input
-                                  id="form1"
-                                  name="quantity"
-                                  value={data.quantity}
-                                  type="text"
-                                  class="form-control text-center"
-                                  style={{ width: "50px" }}
-                                />
-
                                 <button
                                   class="btn btn-transparent"
                                   onClick={() =>
@@ -110,12 +95,31 @@ const Cart = () => {
                                 >
                                   <AiOutlinePlusCircle className="fs-4" />
                                 </button>
+  
+                                <input
+                                  id="form1"
+                                  name="quantity"
+                                  value={data.quantity}
+                                  type="text"
+                                  class="form-control rounded-pill text-center border border-info"
+                                  style={{ width: "50px" }}
+                                />
+  
+                                <button
+                                  class="btn btn-transparent"
+                                  onClick={() =>
+                                    dispatch(decreaseItemQuantity(data._id))
+                                  }
+                                >
+                                  <AiOutlineMinusCircle className="fs-4" />
+                                </button>
+  
                               </div>
                             </div>
                             <div class="col-md-2 col-lg-2 col-xl-2 text-center">
                               <span class="mb-0">$ {data.price}</span>
                             </div>
-                            <div class="col-md-2 col-lg-2 col-xl-2">
+                            <div class="col-md-2 col-lg-2 col-xl-2 text-center">
                               <button
                                 className="btn"
                                 onClick={() => dispatch(removeItem(data._id))}
@@ -124,9 +128,14 @@ const Cart = () => {
                               </button>
                             </div>
                           </div>
+                        </div>
                       </div>
+                    ))
+                    :
+                    <div>
+                        <img src={noCart} className="img-fluid rounded-3" alt="" />
                     </div>
-                  ))}
+                  }
                 </div>
 
                 <div class="col-lg-5">
@@ -134,12 +143,12 @@ const Cart = () => {
                     <div class="card-body shadow">
                       <div class="d-flex justify-content-between align-items-center mb-4">
                         <h5 class="mb-0">Card details</h5>
-                          <img
-                            src={user ? user.photoURL : noImage }
-                            class="img-fluid rounded-circle"
-                            style={{ width: "50px" }}
-                            alt="user image"
-                          />
+                        <img
+                          src={user ? user.photoURL : noImage}
+                          class="img-fluid rounded-circle"
+                          style={{ width: "50px" }}
+                          alt="user image"
+                        />
                       </div>
 
                       <div className="text-center">
@@ -204,7 +213,7 @@ const Cart = () => {
                                 id="typeExp"
                                 htmlFor="typeExp"
                               >
-                                Expiration
+                                Expiration Date
                               </label>
                             </div>
                           </div>
