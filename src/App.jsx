@@ -40,7 +40,11 @@ function App() {
         <Route path='/single-porduct/:id' element={<SingleProduct />} />
         <Route path="/blogs" element={<AllBlogs />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/cart" element={<Cart/>} />
+        <Route path="/cart" element={
+          <RequireAuth>
+            <Cart/>
+          </RequireAuth>
+        } />
 
         {/* Shop Route and Product Category */}
         <Route path="shop" element={<Shop />}>
