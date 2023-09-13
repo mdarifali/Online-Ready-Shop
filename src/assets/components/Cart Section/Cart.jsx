@@ -1,14 +1,11 @@
-import "./cart.css";
 import noCart from "../../images/Cart.jpg";
 import noImage from "../../images/no-image.png";
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { BsTypeH1, BsXLg } from "react-icons/bs";
 import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai";
 import {
   FaArrowRight,
   FaArrowLeft,
-  FaAngleDown,
   FaCcMastercard,
   FaCcVisa,
   FaCcAmex,
@@ -65,77 +62,61 @@ const Cart = () => {
                     </div>
                   </div>
 
-                  {
-                    cart.length ?
-                    cart.map((data) => (
-                      <div class="card shadow mb-4">
-                        <div class="card-body">
-                          <div class="d-flex flex-row align-items-center">
-                            <div className="col-md-4 col-lg-4 col-xl-4">
-                              <div className="text-center">
-                                <img
-                                  src={data.image}
-                                  class="img-fluid"
-                                  alt="Shopping item"
-                                  style={{ width: "80px" }}
-                                />
-                                <div className="d-none d-xl-block d-lg-block d-md-block">
-                                  <span>{data.name}</span>
-                                </div>
-                              </div>
-                            </div>
-  
-                            <div class="col-md-4 col-lg-4 col-xl-4 col-6">
-                              <div className="d-flex justify-content-center align-items-center">
-                                <button
-                                  class="btn btn-transparent"
-                                  onClick={() =>
-                                    dispatch(increaseItemQuantity(data._id))
-                                  }
-                                >
-                                  <AiOutlinePlusCircle className="fs-4" />
-                                </button>
-  
-                                <input
-                                  id="form1"
-                                  name="quantity"
-                                  value={data.quantity}
-                                  type="text"
-                                  class="form-control rounded-pill text-center border border-info"
-                                  style={{ width: "50px" }}
-                                />
-  
-                                <button
-                                  class="btn btn-transparent"
-                                  onClick={() =>
-                                    dispatch(decreaseItemQuantity(data._id))
-                                  }
-                                >
-                                  <AiOutlineMinusCircle className="fs-4" />
-                                </button>
-  
-                              </div>
-                            </div>
-                            <div class="col-md-2 col-lg-2 col-xl-2 text-center">
-                              <span class="mb-0">$ {data.price}</span>
-                            </div>
-                            <div class="col-md-2 col-lg-2 col-xl-2 text-center">
-                              <button
-                                className="btn"
-                                onClick={() => dispatch(removeItem(data._id))}
+                  <div className="row px-3">
+                    {cart.map((item) => (
+                      <div
+                        key={item._id}
+                        className="col-12 border shadow py-3 mb-4"
+                      >
+                        <div className="d-flex justify-content-between">
+                          <small className="fw-bold">{item.name}</small>
+                          <div>
+                            <button
+                              onClick={() => dispatch(removeItem(item._id))}
+                              type="button"
+                              class="btn-close"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                        </div>
+                        <hr />
+                        <div className="row align-items-center">
+                          <div className="col-3">
+                            <img src={item.image} className="w-100" />
+                          </div>
+                          <div className="col-6">
+                            <div className="d-flex flex-row align-items-center justify-content-center">
+                              <span
+                                onClick={() =>
+                                  dispatch(increaseItemQuantity(item._id))
+                                }
+                                type="button"
                               >
-                                <BsXLg className="delete-hover" />
-                              </button>
+                                <AiOutlinePlusCircle className="fs-4" />
+                              </span>
+                              <input
+                                type="text"
+                                value={item.quantity}
+                                className="form-control text-center mx-1 rounded-pill border border-info"
+                                style={{ width: "60px" }}
+                              />
+                              <span
+                                onClick={() =>
+                                  dispatch(decreaseItemQuantity(item._id))
+                                }
+                                type="button"
+                              >
+                                <AiOutlineMinusCircle className="fs-4" />
+                              </span>
                             </div>
+                          </div>
+                          <div className="col-3 text-center">
+                            <span>${item.price}</span>
                           </div>
                         </div>
                       </div>
-                    ))
-                    :
-                    <div>
-                        <img src={noCart} className="img-fluid rounded-3" alt="" />
-                    </div>
-                  }
+                    ))}
+                  </div>
                 </div>
 
                 <div class="col-lg-5">

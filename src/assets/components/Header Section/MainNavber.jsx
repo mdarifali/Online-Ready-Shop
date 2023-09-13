@@ -1,30 +1,19 @@
 import Swal from "sweetalert2";
 import "./header.css";
+import CartSidebar from "./CartSidebar";
 import { BiSearchAlt, BiUser, BiCartAlt } from "react-icons/bi";
-import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { getAuth, signOut } from "firebase/auth";
 import app from "../../firebase/firebaseConfig";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  decreaseItemQuantity,
-  getCartTotal,
-  increaseItemQuantity,
-  removeItem,
-} from "../../redux/features/cart/cartSlice";
-import { useEffect } from "react";
+import { useSelector } from "react-redux";
+
 
 const MainNavber = () => {
   const auth = getAuth(app);
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
-  const { cart, totalQuantity, totalPrice } = useSelector((state) => state.allCart);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getCartTotal());
-  }, [cart, dispatch]);
+  const { cart } = useSelector((state) => state.allCart);
 
   const handleLogout = () => {
     signOut(auth)
@@ -151,64 +140,7 @@ const MainNavber = () => {
           ></button>
         </div>
         <div class="offcanvas-body">
-          <div className="row">
-            {cart.map((item) => (
-              <div key={item._id} className="col-12 border rounded shadow p-4">
-                <div className="row align-items-center">
-                  <small className="mb-4">{item.name}</small>
-                  <div className="col">
-                    <img
-                      src={item.image}
-                      className="img-fluid"
-                      style={{ width: "80px" }}
-                    />
-                  </div>
-                  <div className="col">
-                    <div className="d-flex flex-row align-items-center">
-                      <span
-                        onClick={() => dispatch(increaseItemQuantity(item._id))}
-                        type="button"
-                      >
-                        <AiOutlinePlus className="fs-4" />
-                      </span>
-                      <input
-                        type="text"
-                        value={item.quantity}
-                        className="form-control text-center mx-1 rounded"
-                        style={{ width: "50px" }}
-                      />
-                      <span
-                        onClick={() => dispatch(decreaseItemQuantity(item._id))}
-                        type="button"
-                      >
-                        <AiOutlineMinus className="fs-4" />
-                      </span>
-                    </div>
-                  </div>
-                  <div className="col">
-                    <span className="text-danger">${item.price}</span>
-                  </div>
-                  <div className="col">
-                    <button
-                      onClick={() => dispatch(removeItem(item._id))}
-                      type="button"
-                      class="btn-close"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-5 text-center border rounded p-4">
-            <h6 className="fw-bold">Total Quantity: {totalQuantity}</h6>
-            <h6  className="fw-bold">Total Price: ${totalPrice}</h6>
-          </div>
-          <div className="mt-4">
-            <Link to="/cart">
-              <button className="btn btn-outline-warning w-100">Go Checkout</button>
-            </Link>
-          </div>
+          <CartSidebar/>
         </div>
       </div>
 

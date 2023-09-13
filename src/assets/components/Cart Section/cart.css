@@ -1,9 +1,0 @@
-.delete-hover {
-    font-size: 25px;
-    color: rgb(156, 142, 142);
-    transition: .50s ease;
-}
-
-.delete-hover:hover {
-    color: rgb(212, 7, 7);
-}
