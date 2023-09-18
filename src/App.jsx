@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import MainNavber from "./assets/components/Header Section/MainNavber"
-import TopNavber from "./assets/components/Header Section/TopNavber"
+import MainNavber from "./assets/components/Header Section/MainNavber";
+import TopNavber from "./assets/components/Header Section/TopNavber";
 import Home from "./assets/components/Home Section/Home";
 import Footer from "./assets/components/Footer Section/Footer";
 import Login from "./assets/components/Login and Reg Section/Login";
@@ -9,7 +9,7 @@ import Contact from "./assets/components/Contact Section/Contact";
 import SingleProduct from "./assets/components/Products Data Section/SingleProduct";
 import Shop from "./assets/components/Shop Section/Shop";
 import AllBlogs from "./assets/components/Blogs Section/AllBlogs";
-import MyProfile from "./assets/components/Dashboard Section/MyProfile";
+import MyProfile from "./assets/components/Profile Section/MyProfile";
 import Dashboard from "./assets/components/Dashboard Section/Dashboard";
 import MyOrder from "./assets/components/Dashboard Section/MyOrder";
 import NewsLetter from "./assets/components/Home Section/NewsLetter";
@@ -24,10 +24,7 @@ import Women from "./assets/components/Products Data Section/Women";
 import Accessories from "./assets/components/Products Data Section/Accessories";
 import Cart from "./assets/components/Cart Section/Cart";
 
-
 function App() {
-
-
   return (
     <>
       {/* <TopNavber /> */}
@@ -37,14 +34,27 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path='/single-porduct/:id' element={<SingleProduct />} />
+        <Route path="/single-porduct/:id" element={<SingleProduct />} />
         <Route path="/blogs" element={<AllBlogs />} />
         <Route path="*" element={<NotFound />} />
-        <Route path="/cart" element={
-          <RequireAuth>
-            <Cart/>
-          </RequireAuth>
-        } />
+
+        <Route
+          path="/cart"
+          element={
+            <RequireAuth>
+              <Cart />
+            </RequireAuth>
+          }
+        />
+
+        <Route
+          path="/profile"
+          element={
+            <RequireAuth>
+              <MyProfile />
+            </RequireAuth>
+          }
+        />
 
         {/* Shop Route and Product Category */}
         <Route path="shop" element={<Shop />}>
@@ -55,13 +65,15 @@ function App() {
         </Route>
 
         {/* Admin Route and Dashboard Category */}
-        <Route path='dashboard' element={
-          <RequireAuth>
-            <Dashboard />
-          </RequireAuth>}>
-          <Route index element={<MyProfile />} />
+        <Route
+          path="dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard />
+            </RequireAuth>
+          }
+        >
           <Route path="order" element={<MyOrder />} />
-          <Route path="profile" element={<MyProfile />} />
           <Route path="add-product" element={<AddProduct />} />
           <Route path="manage-product" element={<ManageProduct />} />
           <Route path="manage-user" element={<ManageUser />} />
@@ -69,7 +81,7 @@ function App() {
       </Routes>
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

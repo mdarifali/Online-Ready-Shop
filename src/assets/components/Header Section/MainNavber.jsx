@@ -1,13 +1,13 @@
 import Swal from "sweetalert2";
+import noImage from "../../images/no-image.png";
 import "./header.css";
 import CartSidebar from "./CartSidebar";
-import { BiSearchAlt, BiUser, BiCartAlt } from "react-icons/bi";
+import { BiSearchAlt, BiUser, BiCartAlt, BiLogInCircle } from "react-icons/bi";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { getAuth, signOut } from "firebase/auth";
 import app from "../../firebase/firebaseConfig";
 import { useSelector } from "react-redux";
-
 
 const MainNavber = () => {
   const auth = getAuth(app);
@@ -27,7 +27,7 @@ const MainNavber = () => {
   };
 
   return (
-    <div className="">
+    <div className="sticky-top">
       <nav class="navbar navbar-expand-lg bg-white shadow">
         <div class="container">
           <Link class="nav-link" to="/">
@@ -72,42 +72,60 @@ const MainNavber = () => {
             >
               <BiSearchAlt className="fs-5 me-2 me-lg-5 me-md-5 me-xl-5" />
             </a>
-            <a
-              class="nav-link text-dark"
-              to="#"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <BiUser className="fs-5 me-2 me-lg-5 me-md-5 me-xl-5" />
-            </a>
-            <ul
-              class="dropdown-menu dropdown-menu-sm-start"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <li>
-                <Link class="dropdown-item" to="/dashboard">
-                  My Dashboard
-                </Link>
-              </li>
-              {user ? (
-                <li>
-                  <button
-                    onClick={handleLogout}
-                    class="dropdown-item active btn"
-                  >
-                    Logout
-                  </button>
-                </li>
-              ) : (
-                <li>
-                  <Link class="dropdown-item active" to="/login">
-                    Login
-                  </Link>
-                </li>
-              )}
-            </ul>
+
+            {user ? (
+              <>
+                <a
+                  class="nav-link text-dark"
+                  to="#"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <BiUser className="fs-5 me-2 me-lg-5 me-md-5 me-xl-5" />
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-sm-start"
+                  aria-labelledby="dropdownMenuButton"
+                >
+                  <li className="text-center mb-2">
+                    <img
+                      src={user.photoURL ? user.photoURL : noImage}
+                      className="rounded-pill"
+                      alt="user photo"
+                      style={{ width: "60px" }}
+                    />
+                  </li>
+                  <li>
+                    <Link class="dropdown-item" to="/profile">
+                      <small>My Profile</small>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link class="dropdown-item" to="/dashboard/order">
+                      <small>My Order</small>
+                    </Link>
+                  </li>
+                  <li>
+                    <button onClick={handleLogout} class="dropdown-item ">
+                      <small>Logout</small>
+                    </button>
+                  </li>
+                </ul>
+              </>
+            ) : (
+              <Link
+                class="nav-link text-dark"
+                to="/login"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Login"
+              >
+                <BiLogInCircle className="fs-5 me-2 me-lg-5 me-md-5 me-xl-5" />
+              </Link>
+            )}
+
             <a
               type="button"
               class="position-relative"
@@ -140,7 +158,7 @@ const MainNavber = () => {
           ></button>
         </div>
         <div class="offcanvas-body">
-          <CartSidebar/>
+          <CartSidebar />
         </div>
       </div>
 

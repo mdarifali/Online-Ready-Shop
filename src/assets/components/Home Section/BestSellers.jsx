@@ -9,7 +9,7 @@ const BestSellers = () => {
   return (
     <div className='container mt-5'>
       <div className="row">
-        <h1 className='text-center mb-4'>Best Sellers</h1>
+        <h2 className='text-center mb-4'>Best Sellers</h2>
         <Carousel
           className='py-5'
           plugins={[

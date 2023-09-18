@@ -1,4 +1,3 @@
-import noCart from "../../images/Cart.jpg";
 import noImage from "../../images/no-image.png";
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -62,7 +61,7 @@ const Cart = () => {
                     </div>
                   </div>
 
-                  <div className="row px-3">
+                  <div className="row px-2">
                     {cart.map((item) => (
                       <div
                         key={item._id}
@@ -110,8 +109,9 @@ const Cart = () => {
                               </span>
                             </div>
                           </div>
-                          <div className="col-3 text-center">
-                            <span>${item.price}</span>
+                          <div className="col-3 text-center p-0">
+                            <span className="fw-bolder text-danger">${item.price}</span>
+                            <p className="d-none d-xl-block d-lg-block d-md-block">Quantity: {item.quantity}</p>
                           </div>
                         </div>
                       </div>
@@ -125,7 +125,7 @@ const Cart = () => {
                       <div class="d-flex justify-content-between align-items-center mb-4">
                         <h5 class="mb-0">Card details</h5>
                         <img
-                          src={user ? user.photoURL : noImage}
+                          src={user.photoURL ? user.photoURL : noImage}
                           class="img-fluid rounded-circle"
                           style={{ width: "50px" }}
                           alt="user image"
@@ -134,26 +134,28 @@ const Cart = () => {
 
                       <div className="text-center">
                         <p>Select Card Type</p>
-                        <a href="#!" type="submit">
-                          <FaCcMastercard className="me-3 fs-1 text-light" />
-                        </a>
-                        <a href="#!" type="submit">
-                          <FaCcVisa className="me-3 fs-1 text-light" />
-                        </a>
-                        <a href="#!" type="submit">
-                          <FaCcAmex className="me-3 fs-1 text-light" />
-                        </a>
-                        <a href="#!" type="submit">
-                          <FaCcPaypal className="fs-1 text-light" />
-                        </a>
+                        <div>
+                          <a href="#!">
+                            <FaCcMastercard className="me-3 fs-1 text-light" />
+                          </a>
+                          <a href="#!">
+                            <FaCcVisa className="me-3 fs-1 text-light" />
+                          </a>
+                          <a href="#!">
+                            <FaCcAmex className="me-3 fs-1 text-light" />
+                          </a>
+                          <a href="#!">
+                            <FaCcPaypal className="fs-1 text-light" />
+                          </a>
+                        </div>
                       </div>
-
+                      <hr />
                       <form class="mt-4">
                         <div class="form-outline form-white mb-4">
                           <input
                             type="text"
                             id="typeName"
-                            class="form-control form-control-lg"
+                            class="form-control"
                             siez="17"
                             placeholder="Cardholder's Name"
                           />
@@ -166,7 +168,7 @@ const Cart = () => {
                           <input
                             type="text"
                             id="typeText"
-                            class="form-control form-control-lg"
+                            class="form-control"
                             siez="17"
                             placeholder="1234 5678 9012 3457"
                             minLength="19"
@@ -183,11 +185,8 @@ const Cart = () => {
                               <input
                                 type="text"
                                 id="typeExp"
-                                class="form-control form-control-lg"
-                                placeholder="MM/YYYY"
-                                size="7"
-                                minLength="7"
-                                maxLength="7"
+                                class="form-control"
+                                placeholder="mm/yyyy"
                               />
                               <label
                                 class="form-label"
@@ -203,7 +202,7 @@ const Cart = () => {
                               <input
                                 type="password"
                                 id="typeText1"
-                                class="form-control form-control-lg"
+                                class="form-control"
                                 placeholder="cvv number"
                                 size="1"
                                 minLength="3"
@@ -230,9 +229,9 @@ const Cart = () => {
                       </div>
 
                       {/* <div class="d-flex justify-content-between">
-                                                        <p class="mb-2">Shipping</p>
-                                                        <p class="mb-2">$20.00</p>
-                                                    </div> */}
+                        <p class="mb-2">Shipping</p>
+                        <p class="mb-2">$20.00</p>
+                      </div> */}
 
                       <div class="d-flex justify-content-between mb-4">
                         <p class="mb-2">Total(Incl. taxes)</p>
@@ -241,7 +240,7 @@ const Cart = () => {
 
                       <button
                         type="button"
-                        class="btn btn-info btn-block btn-lg  w-100"
+                        class="btn btn-info btn-block w-100"
                       >
                         <div class="d-flex justify-content-between text-light">
                           <span>${totalPrice}</span>

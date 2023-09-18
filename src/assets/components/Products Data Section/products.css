@@ -1,14 +1,30 @@
 
-.card-body-hover {
+.card-main {
     transition: all 0.50s ease-in;
-    padding: 0;
-}
-
-.card-body-hover:hover {
-    box-shadow: 10px 11px 25px -15px rgba(0,0,0,0.5);
-    -webkit-box-shadow: 10px 11px 25px -15px rgba(0,0,0,0.5);
-    -moz-box-shadow: 10px 11px 25px -15px rgba(0,0,0,0.5);
+    width: auto;
+    min-height: 300px;
+    overflow: hidden;
+    position: relative;
     cursor: pointer;
-    border: none;
 }
 
+.card-details {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.253);
+    transition: 1s ease;
+    border-radius: 10px;
+}
+
+.card-main:hover .card-details{
+    right: 0;
+    cursor: default;
+}

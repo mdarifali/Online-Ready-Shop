@@ -1,16 +1,15 @@
 import './products.css';
 import ProductCard from './ProductCard';
-import useHook from '../Use Hooks/useHook';
-import { apiData } from '../apiData';
+import { useSelector } from 'react-redux';
 
 const AllProducts = () => {
 
-    // const [products] = useHook()
+    const items = useSelector((state) => state.allCart.products);
     
     return (
         <div className='row g-5'>
             {
-                apiData.map((product) => {
+                items.map((product) => {
                     return <ProductCard key={product._id} product={product} />
                 })
             }

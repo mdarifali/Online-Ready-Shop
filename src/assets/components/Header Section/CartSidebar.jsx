@@ -1,4 +1,4 @@
-import React from "react";
+import noCart from "../../images/Cart.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { BsCart3 } from "react-icons/bs";
@@ -69,7 +69,7 @@ const CartSidebar = () => {
                     </div>
                   </div>
                   <div className="col-3">
-                    <span className="fs-5 fw-bold">${item.price}</span>
+                    <span className="fw-bolder">${item.price}</span>
                   </div>
                 </div>
               </div>
@@ -101,7 +101,7 @@ const CartSidebar = () => {
       ) : (
         <div className="text-center mt-5">
           <h5>No Item Added</h5>
-          <BsCart3 className="fs-3 text-secondary" />
+          <img src={noCart} className="w-100 mt-5" alt="" />
         </div>
       )}
     </>
