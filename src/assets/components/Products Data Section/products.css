@@ -1,6 +1,6 @@
 
 .card-main {
-    transition: all 0.50s ease-in;
+    border-radius: 10px;
     width: auto;
     min-height: 300px;
     overflow: hidden;

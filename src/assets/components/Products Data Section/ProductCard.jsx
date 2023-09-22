@@ -10,7 +10,7 @@ const ProductCard = ({ product }) => {
 
     return (
         <div className="col-md-4 col-lg-3 col-6 col-ex-sm">
-            <div class="card-main">
+            <div class="card-main shadow">
                 <img src={image} class="w-100" alt="product Image" />
                 <div className='card-details'>
                     <Link to={`/single-porduct/${product._id}`} class="nav-link">

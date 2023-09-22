@@ -2,17 +2,14 @@ import React from 'react';
 import Blogs from '../Home Section/Blogs';
 import Carousel, { slidesToShowPlugin, autoplayPlugin } from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
-import imageOne from '../../images/blog_1.jpg'
-import imageTwo from '../../images/blog_2.jpg'
-import imageThree from '../../images/blog_3.jpg'
+import blog1 from '../../images/blog-1.jpg'
+import blog2 from '../../images/blog-2.jpg'
+import blog3 from '../../images/blog-3.jpg'
 
 
 const AllBlogs = () => {
     return (
-        <div className='container mt-5'>
-            <div className='text-center'>
-                <h1 className='mb-5 fw-bold d-inline-flex border-bottom border-info border-3 text-uppercase'>Latest News</h1>
-            </div>
+        <div className='container my-5'>
             <div className="row">
                 <Carousel
                     className='py-5'
@@ -65,30 +62,82 @@ const AllBlogs = () => {
                         }
                     }}
                 >
-                    <div class="card bg-dark text-white">
-                        <img src={imageOne} class="opacity-50" alt="..." />
-                        <div class="card-img-overlay mt-5">
-                            <h5 class="card-title">Latest One</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
+                    <div class="card">
+                        <img src={blog1} alt="..." />
                     </div>
-                    <div class="card bg-dark text-white">
-                        <img src={imageTwo} class="opacity-50" alt="..." />
-                        <div class="card-img-overlay mt-5">
-                            <h5 class="card-title">Latest One</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
+                    <div class="card">
+                        <img src={blog2} alt="..." />
                     </div>
-                    <div class="card bg-dark text-white">
-                        <img src={imageThree} class="opacity-50" alt="..." />
-                        <div class="card-img-overlay mt-5">
-                            <h5 class="card-title">Latest One</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        </div>
+                    <div class="card">
+                        <img src={blog3} alt="..." />
                     </div>
                 </Carousel>
             </div>
-            <Blogs />
+            
+            
+            <div className='mt-5'>
+                <div className='text-center'>
+                    <h2 className='mb-5 d-inline-flex border-bottom border-info border-2clear text-uppercase'>Latest News</h2>
+                </div>
+                <div className="row g-5">
+                    <div className="col-lg-4">
+                        <div class="card ">
+                            <img src={blog1} class="card-img-top" alt="..." />
+                            <div className="card-body">
+                                <h5 className='card-title'>Fashion hacks</h5>
+                                <p className='card-text'>Hacks or unorthodox methods to do things are a very popular topic for readers, so posting simple hacks that people can do at home to their wardrobe will drive organic traffic to your website.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-4">
+                        <div class="card">
+                            <img src={blog2} class="card-img-top" alt="..." />
+                            <div className="card-body">
+                                <h5 className='card-title'>Fashion hacks</h5>
+                                <p className='card-text'>Hacks or unorthodox methods to do things are a very popular topic for readers, so posting simple hacks that people can do at home to their wardrobe will drive organic traffic to your website.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-4">
+                        <div class="card">
+                            <img src={blog3} class="card-img-top" alt="..." />
+                            <div className="card-body">
+                                <h5 className='card-title'>Fashion hacks</h5>
+                                <p className='card-text'>Hacks or unorthodox methods to do things are a very popular topic for readers, so posting simple hacks that people can do at home to their wardrobe will drive organic traffic to your website.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row g-5">
+                    <div className="col-lg-4">
+                        <div class="card ">
+                            <img src={blog1} class="card-img-top" alt="..." />
+                            <div className="card-body">
+                                <h5 className='card-title'>Fashion hacks</h5>
+                                <p className='card-text'>Hacks or unorthodox methods to do things are a very popular topic for readers, so posting simple hacks that people can do at home to their wardrobe will drive organic traffic to your website.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-4">
+                        <div class="card">
+                            <img src={blog2} class="card-img-top" alt="..." />
+                            <div className="card-body">
+                                <h5 className='card-title'>Fashion hacks</h5>
+                                <p className='card-text'>Hacks or unorthodox methods to do things are a very popular topic for readers, so posting simple hacks that people can do at home to their wardrobe will drive organic traffic to your website.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-4">
+                        <div class="card">
+                            <img src={blog3} class="card-img-top" alt="..." />
+                            <div className="card-body">
+                                <h5 className='card-title'>Fashion hacks</h5>
+                                <p className='card-text'>Hacks or unorthodox methods to do things are a very popular topic for readers, so posting simple hacks that people can do at home to their wardrobe will drive organic traffic to your website.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
         </div >
     );
 };

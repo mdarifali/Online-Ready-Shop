@@ -1,7 +1,7 @@
 import React from 'react';
-import blog1 from '../../images/blog_1.jpg';
-import blog2 from '../../images/blog_2.jpg';
-import blog3 from '../../images/blog_3.jpg';
+import blog1 from '../../images/blog-1.jpg';
+import blog2 from '../../images/blog-2.jpg';
+import blog3 from '../../images/blog-3.jpg';
 import './home.css';
 
 const Blogs = () => {
