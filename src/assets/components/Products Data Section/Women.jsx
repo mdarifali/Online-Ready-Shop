@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
 import useHook from '../Use Hooks/useHook';
 import './products.css';
+import { Link } from 'react-router-dom';
 
 const Women = () => {
 
-    const [products] = useHook()
-    const women = products.filter(item => item.category === 'Women');
+    const [producs] = useHook()
+    const women = producs.filter(item => item.category === 'Women');
 
     return (
         <div className='row g-5'>
